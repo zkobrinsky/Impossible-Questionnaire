@@ -1,0 +1,310 @@
+  [1m[35m (3111.3ms)[0m  [1m[35mCREATE DATABASE "backend_development" ENCODING = 'unicode'[0m
+  [1m[35m (1871.9ms)[0m  [1m[35mCREATE DATABASE "backend_test" ENCODING = 'unicode'[0m
+  [1m[35m (37.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (22.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateQuestionnaires (20201116210722)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE TABLE "questionnaires" ("id" bigserial primary key, "title" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (2.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201116210722"]]
+  [1m[35m (1.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateQuestions (20201116212412)
+  [1m[35m (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (26.9ms)[0m  [1m[35mCREATE TABLE "questions" ("id" bigserial primary key, "answer_1" character varying, "answer_2" character varying, "answer_3" character varying, "answer_4" character varying, "correct_answer" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201116212412"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (2.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-11-16 21:45:35.463775"], ["updated_at", "2020-11-16 21:45:35.463775"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddContentToQuestions (20201116214628)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "questions" ADD "content" character varying[0m
+  [1m[36mprimary::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201116214628"]]
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (3.4ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Dune stuff"], ["created_at", "2020-11-16 21:54:26.915342"], ["updated_at", "2020-11-16 21:54:26.915342"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (1.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (1.2ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddQuestionnaireToQuestions (20201116220023)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.0ms)[0m  [1m[35mALTER TABLE "questions" ADD "questionnaire_id" bigint NOT NULL[0m
+  [1m[35m (8.1ms)[0m  [1m[35mCREATE  INDEX  "index_questions_on_questionnaire_id" ON "questions"  ("questionnaire_id")[0m
+  [1m[35m (12.0ms)[0m  [1m[35mALTER TABLE "questions" ADD CONSTRAINT "fk_rails_8c4848c0c5"
+FOREIGN KEY ("questionnaire_id")
+  REFERENCES "questionnaires" ("id")
+[0m
+  [1m[36mprimary::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201116220023"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (1.9ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Dune stuff"], ["created_at", "2020-11-16 22:01:22.983652"], ["updated_at", "2020-11-16 22:01:22.983652"]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestion Load (1.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1 LIMIT $2[0m  [["questionnaire_id", 2], ["LIMIT", 11]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (3.4ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["answer_1", "Selusa Secundus"], ["answer_2", "Ecaz"], ["answer_3", "A process cannot be understood by stopping it. Understanding must move with the flow of the process, must join it and flow with it."], ["answer_4", "A process cannot be understood by stopping it. Understanding must move with the flow of the process, must join it and flow with it."], ["correct_answer", "The wise animal blends into its surroundings."], ["created_at", "2020-11-16 22:02:04.918742"], ["updated_at", "2020-11-16 22:02:04.918742"], ["questionnaire_id", 2]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1 LIMIT $2[0m  [["questionnaire_id", 2], ["LIMIT", 11]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1 ORDER BY "questions"."id" ASC LIMIT $2[0m  [["questionnaire_id", 2], ["LIMIT", 1]]
+Started GET "/questions/index" for 127.0.0.1 at 2020-11-16 17:05:50 -0500
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questions_controller.rb:4: syntax error, unexpected ':'
+...   render :json => questions, : include => questionnaires
+...                              ^):
+  
+app/controllers/questions_controller.rb:4: syntax error, unexpected ':'
+app/controllers/questions_controller.rb:4: syntax error, unexpected ':'
+Started GET "/questions/index" for 127.0.0.1 at 2020-11-16 17:05:51 -0500
+  
+SyntaxError (/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questions_controller.rb:4: syntax error, unexpected ':'
+...   render :json => questions, : include => questionnaires
+...                              ^):
+  
+app/controllers/questions_controller.rb:4: syntax error, unexpected ':'
+app/controllers/questions_controller.rb:4: syntax error, unexpected ':'
+Started GET "/favicon.ico" for 127.0.0.1 at 2020-11-16 17:05:51 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/questions/index" for 127.0.0.1 at 2020-11-16 17:06:09 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 70)
+
+
+Started GET "/questions/index" for 127.0.0.1 at 2020-11-16 17:06:13 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 27)
+
+
+Started GET "/questions/index" for 127.0.0.1 at 2020-11-16 17:06:19 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 44)
+
+
+Started GET "/questions/index" for 127.0.0.1 at 2020-11-16 17:06:22 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 26)
+
+
+Started GET "/questions/index" for 127.0.0.1 at 2020-11-16 17:06:36 -0500
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 74)
+
+
+Started GET "/questions/index" for 127.0.0.1 at 2020-11-16 17:06:39 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 27)
+
+
+Started GET "/questions/index" for 127.0.0.1 at 2020-11-16 17:06:44 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 27)
+
+
+Started GET "/questions/index" for ::1 at 2020-11-16 17:07:05 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 204 No Content in 0ms (ActiveRecord: 0.0ms | Allocations: 27)
+
+
+  [1m[36mQuestion Load (1.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (1.2ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/questions/index" for ::1 at 2020-11-16 17:07:36 -0500
+  [1m[35m (3.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 74)
+
+
+  [1m[36mQuestionnaire Load (1.2ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1 LIMIT $2[0m  [["questionnaire_id", 2], ["LIMIT", 11]]
+Started GET "/questions/index" for ::1 at 2020-11-16 17:07:39 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 27)
+
+
+Started GET "/" for ::1 at 2020-11-16 17:07:49 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 43.3ms | Allocations: 317)
+Completed 200 OK in 87ms (Views: 74.0ms | ActiveRecord: 0.0ms | Allocations: 1595)
+
+
+Started GET "/questions/index" for ::1 at 2020-11-16 17:07:54 -0500
+Processing by QuestionsController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 204 No Content in 1ms (ActiveRecord: 0.0ms | Allocations: 27)
+
+
+Started GET "/questions" for ::1 at 2020-11-16 17:08:13 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (2.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 105ms (Views: 48.7ms | ActiveRecord: 15.9ms | Allocations: 10261)
+
+
+Started GET "/questions" for ::1 at 2020-11-16 17:08:59 -0500
+  
+SyntaxError (/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questions_controller.rb:4: syntax error, unexpected tIDENTIFIER, expecting =>
+...estions, :include questionnaire
+...                  ^~~~~~~~~~~~~):
+  
+app/controllers/questions_controller.rb:4: syntax error, unexpected tIDENTIFIER, expecting =>
+app/controllers/questions_controller.rb:4: syntax error, unexpected tIDENTIFIER, expecting =>
+Started GET "/questions" for ::1 at 2020-11-16 17:14:02 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 62ms (Views: 44.2ms | ActiveRecord: 9.6ms | Allocations: 8265)
+
+
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/questions" for ::1 at 2020-11-16 17:19:13 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 1.1ms | Allocations: 1029)
+
+
+Started GET "/questions" for ::1 at 2020-11-16 17:19:16 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.1ms | Allocations: 1010)
+
+
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Load (0.6ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" WHERE "questionnaires"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/questions" for ::1 at 2020-11-16 17:19:25 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (1.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 1.6ms | Allocations: 1010)
+
+
+Started GET "/questions" for ::1 at 2020-11-16 17:19:29 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.6ms | Allocations: 1024)
+
+
+Started GET "/questions" for ::1 at 2020-11-16 17:19:29 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.7ms | Allocations: 1024)
+
+
+Started GET "/questions" for ::1 at 2020-11-16 17:19:30 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.7ms | Allocations: 1010)
+
+
+Started GET "/questions" for ::1 at 2020-11-16 17:19:30 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.6ms | Allocations: 1010)
+
+
+Started GET "/questions" for ::1 at 2020-11-16 17:19:30 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.6ms | Allocations: 1010)
+
+
+Started GET "/questions" for ::1 at 2020-11-16 17:19:30 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 40ms (Views: 38.8ms | ActiveRecord: 0.7ms | Allocations: 1013)
+
+
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Load (0.6ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" WHERE "questionnaires"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (1.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" WHERE "questionnaires"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mQuestion Update (3.3ms)[0m  [1m[33mUPDATE "questions" SET "content" = $1, "updated_at" = $2 WHERE "questions"."id" = $3[0m  [["content", "some content"], ["updated_at", "2020-11-17 00:36:11.398894"], ["id", 1]]
+  [1m[35m (2.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/questions" for ::1 at 2020-11-16 19:36:56 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (18.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 25ms (Views: 6.0ms | ActiveRecord: 18.2ms | Allocations: 3320)
+
+
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Load (0.5ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" WHERE "questionnaires"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mQuestion Update (0.8ms)[0m  [1m[33mUPDATE "questions" SET "content" = $1, "updated_at" = $2 WHERE "questions"."id" = $3[0m  [["content", "What was that fremen line again?"], ["updated_at", "2020-11-17 00:37:34.446738"], ["id", 1]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/questions" for ::1 at 2020-11-16 19:37:37 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 1019)
+
+
