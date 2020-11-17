@@ -1,12 +1,19 @@
 #change-this {
-    color: green;
+    /* color: green; */
 }
 
 #change-this:hover {
-    color: red;
-    margin-left: 30px;
+    opacity: 50%;
+    /* margin-top: 30px; */
 }
 
 #radio {
-    padding: 0 20px;
+    /* padding: 0 20px; */
 }
+
+
+
+/* #radio:hover {
+    margin-top: 80px;
+} */
+
