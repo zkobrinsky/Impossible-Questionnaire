@@ -660,3 +660,944 @@ Processing by QuestionnairesController#index as HTML
 Completed 200 OK in 195ms (Views: 173.0ms | ActiveRecord: 10.2ms | Allocations: 872572)
 
 
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[35m (3.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFeaturedToQuestionnaires (20201117194200)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (275.2ms)[0m  [1m[35mALTER TABLE "questionnaires" ADD "featured" boolean[0m
+  [1m[36mprimary::SchemaMigration Create (3.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201117194200"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (4.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mQuestionnaire Load (1.4ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Update (1.5ms)[0m  [1m[33mUPDATE "questionnaires" SET "featured" = $1, "updated_at" = $2 WHERE "questionnaires"."id" = $3[0m  [["featured", true], ["updated_at", "2020-11-17 19:43:31.008189"], ["id", 2]]
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFeaturedToQuestionnaires (20201117194200)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (52.9ms)[0m  [1m[35mALTER TABLE "questionnaires" DROP COLUMN "featured"[0m
+  [1m[36mprimary::SchemaMigration Destroy (1.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20201117194200"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(5073945470573576205)[0m
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddFeaturedToQuestionnaires (20201117194200)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.1ms)[0m  [1m[35mALTER TABLE "questionnaires" ADD "featured" boolean DEFAULT FALSE[0m
+  [1m[36mprimary::SchemaMigration Create (1.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20201117194200"]]
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(5073945470573576205)[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mQuestion Load (3.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (3.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (1.7ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "synergize sticky schemas"], ["created_at", "2020-11-17 20:28:57.500605"], ["updated_at", "2020-11-17 20:28:57.500605"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.8ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "productize seamless relationships"], ["created_at", "2020-11-17 20:28:57.513382"], ["updated_at", "2020-11-17 20:28:57.513382"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.6ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "facilitate out-of-the-box niches"], ["created_at", "2020-11-17 20:28:57.523198"], ["updated_at", "2020-11-17 20:28:57.523198"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.9ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "iterate web-enabled systems"], ["created_at", "2020-11-17 20:28:57.533804"], ["updated_at", "2020-11-17 20:28:57.533804"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.8ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "innovate holistic portals"], ["created_at", "2020-11-17 20:28:57.544450"], ["updated_at", "2020-11-17 20:28:57.544450"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestion Load (2.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (1.5ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/questionnaires" for ::1 at 2020-11-17 15:29:48 -0500
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionnairesController#index as HTML
+  [1m[36mQuestionnaire Load (2.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 2]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 3]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 4]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 5]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 6]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 7]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 190ms (Views: 139.2ms | ActiveRecord: 36.3ms | Allocations: 22190)
+
+
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1 LIMIT $2[0m  [["questionnaire_id", 7], ["LIMIT", 11]]
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (1.3ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "integrate enterprise architectures"], ["created_at", "2020-11-17 20:34:46.589092"], ["updated_at", "2020-11-17 20:34:46.589092"]]
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.8ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "embrace enterprise relationships"], ["created_at", "2020-11-17 20:35:29.052660"], ["updated_at", "2020-11-17 20:35:29.052660"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (2.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (1.4ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "facilitate 24/365 convergence"], ["created_at", "2020-11-17 20:36:38.402853"], ["updated_at", "2020-11-17 20:36:38.402853"]]
+  [1m[35m (1.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.7ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "optimize next-generation synergies"], ["created_at", "2020-11-17 20:36:38.515822"], ["updated_at", "2020-11-17 20:36:38.515822"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.8ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "mesh virtual e-business"], ["created_at", "2020-11-17 20:36:38.540350"], ["updated_at", "2020-11-17 20:36:38.540350"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.7ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "enhance mission-critical action-items"], ["created_at", "2020-11-17 20:36:38.587561"], ["updated_at", "2020-11-17 20:36:38.587561"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.6ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "integrate compelling schemas"], ["created_at", "2020-11-17 20:36:38.597571"], ["updated_at", "2020-11-17 20:36:38.597571"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestion Load (1.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (1.7ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "revolutionize user-centric partnerships"], ["created_at", "2020-11-17 20:37:53.653932"], ["updated_at", "2020-11-17 20:37:53.653932"]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (2.3ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.785423"], ["updated_at", "2020-11-17 20:37:53.785423"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.796678"], ["updated_at", "2020-11-17 20:37:53.796678"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.805238"], ["updated_at", "2020-11-17 20:37:53.805238"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.814199"], ["updated_at", "2020-11-17 20:37:53.814199"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.823088"], ["updated_at", "2020-11-17 20:37:53.823088"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 15]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.7ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "benchmark turn-key partnerships"], ["created_at", "2020-11-17 20:37:53.832103"], ["updated_at", "2020-11-17 20:37:53.832103"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.840884"], ["updated_at", "2020-11-17 20:37:53.840884"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.849201"], ["updated_at", "2020-11-17 20:37:53.849201"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.858217"], ["updated_at", "2020-11-17 20:37:53.858217"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.866738"], ["updated_at", "2020-11-17 20:37:53.866738"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 16]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.875340"], ["updated_at", "2020-11-17 20:37:53.875340"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.6ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "implement robust infomediaries"], ["created_at", "2020-11-17 20:37:53.884569"], ["updated_at", "2020-11-17 20:37:53.884569"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.892809"], ["updated_at", "2020-11-17 20:37:53.892809"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 17]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.902938"], ["updated_at", "2020-11-17 20:37:53.902938"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.912261"], ["updated_at", "2020-11-17 20:37:53.912261"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (3.4ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.921412"], ["updated_at", "2020-11-17 20:37:53.921412"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.932763"], ["updated_at", "2020-11-17 20:37:53.932763"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.6ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "transition wireless mindshare"], ["created_at", "2020-11-17 20:37:53.941741"], ["updated_at", "2020-11-17 20:37:53.941741"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.950067"], ["updated_at", "2020-11-17 20:37:53.950067"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 18]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.959416"], ["updated_at", "2020-11-17 20:37:53.959416"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 18]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.968682"], ["updated_at", "2020-11-17 20:37:53.968682"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 18]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.979643"], ["updated_at", "2020-11-17 20:37:53.979643"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 18]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:53.990233"], ["updated_at", "2020-11-17 20:37:53.990233"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 18]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.8ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "enable dot-com applications"], ["created_at", "2020-11-17 20:37:54.000029"], ["updated_at", "2020-11-17 20:37:54.000029"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:54.009191"], ["updated_at", "2020-11-17 20:37:54.009191"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 19]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:54.018498"], ["updated_at", "2020-11-17 20:37:54.018498"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 19]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:54.027818"], ["updated_at", "2020-11-17 20:37:54.027818"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 19]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:54.037707"], ["updated_at", "2020-11-17 20:37:54.037707"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 19]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Chuck Norris doesn't delete files, he blows them away."], ["correct_answer", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["created_at", "2020-11-17 20:37:54.046887"], ["updated_at", "2020-11-17 20:37:54.046887"], ["content", "\"It works on my machine\" always holds true for Chuck Norris?"], ["questionnaire_id", 19]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestion Load (1.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" ORDER BY "questions"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (1.2ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1 LIMIT $2[0m  [["questionnaire_id", 19], ["LIMIT", 11]]
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1 ORDER BY "questions"."id" ASC LIMIT $2[0m  [["questionnaire_id", 19], ["LIMIT", 1]]
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mQuestionnaire Load (15.1ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (35.8ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+Started GET "/questionnaires" for ::1 at 2020-11-17 15:39:43 -0500
+Processing by QuestionnairesController#index as HTML
+  [1m[36mQuestionnaire Load (14.1ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 2]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 3]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 4]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 5]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 6]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 7]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 8]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 9]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 10]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 11]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 12]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 13]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 14]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 15]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 16]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 17]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 18]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 19]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 116ms (Views: 88.2ms | ActiveRecord: 27.5ms | Allocations: 25192)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-17 15:40:29 -0500
+Processing by QuestionnairesController#index as HTML
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 2]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 3]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 4]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 5]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 6]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 7]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 8]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 9]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 10]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 11]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 12]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 13]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 14]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 15]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 16]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 17]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 18]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 19]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 132ms (Views: 118.5ms | ActiveRecord: 12.9ms | Allocations: 25096)
+
+
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mQuestion Load (13.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (1.1ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 7]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 8]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 16]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (1.0ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 23]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 25]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestionnaire Load (1.4ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.5ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 2]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 3]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.1ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 4]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 6]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.2ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 7]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 8]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 9]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 10]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.0ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 11]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 12]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.1ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 13]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.1ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 14]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 15]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 16]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 17]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 18]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 19]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (1.3ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "optimize scalable communities"], ["created_at", "2020-11-17 20:40:37.000236"], ["updated_at", "2020-11-17 20:40:37.000236"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.5ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.019257"], ["updated_at", "2020-11-17 20:40:37.019257"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 20]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.030062"], ["updated_at", "2020-11-17 20:40:37.030062"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 20]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.039344"], ["updated_at", "2020-11-17 20:40:37.039344"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 20]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.048438"], ["updated_at", "2020-11-17 20:40:37.048438"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 20]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.3ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.057943"], ["updated_at", "2020-11-17 20:40:37.057943"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 20]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.6ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "cultivate value-added methodologies"], ["created_at", "2020-11-17 20:40:37.068212"], ["updated_at", "2020-11-17 20:40:37.068212"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.077669"], ["updated_at", "2020-11-17 20:40:37.077669"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 21]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.086535"], ["updated_at", "2020-11-17 20:40:37.086535"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 21]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.095515"], ["updated_at", "2020-11-17 20:40:37.095515"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 21]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.105166"], ["updated_at", "2020-11-17 20:40:37.105166"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 21]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.115277"], ["updated_at", "2020-11-17 20:40:37.115277"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 21]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.6ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "drive innovative models"], ["created_at", "2020-11-17 20:40:37.125264"], ["updated_at", "2020-11-17 20:40:37.125264"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.134254"], ["updated_at", "2020-11-17 20:40:37.134254"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 22]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.143779"], ["updated_at", "2020-11-17 20:40:37.143779"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 22]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.152478"], ["updated_at", "2020-11-17 20:40:37.152478"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 22]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.161569"], ["updated_at", "2020-11-17 20:40:37.161569"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 22]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.172342"], ["updated_at", "2020-11-17 20:40:37.172342"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 22]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.6ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "morph seamless paradigms"], ["created_at", "2020-11-17 20:40:37.181801"], ["updated_at", "2020-11-17 20:40:37.181801"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.190329"], ["updated_at", "2020-11-17 20:40:37.190329"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 23]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.199782"], ["updated_at", "2020-11-17 20:40:37.199782"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 23]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.209977"], ["updated_at", "2020-11-17 20:40:37.209977"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 23]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.219967"], ["updated_at", "2020-11-17 20:40:37.219967"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 23]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.230867"], ["updated_at", "2020-11-17 20:40:37.230867"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 23]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.8ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "redefine synergistic mindshare"], ["created_at", "2020-11-17 20:40:37.243530"], ["updated_at", "2020-11-17 20:40:37.243530"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.274424"], ["updated_at", "2020-11-17 20:40:37.274424"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 24]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.284406"], ["updated_at", "2020-11-17 20:40:37.284406"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 24]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.294855"], ["updated_at", "2020-11-17 20:40:37.294855"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 24]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.303704"], ["updated_at", "2020-11-17 20:40:37.303704"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 24]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' beard is immutable."], ["answer_2", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["answer_3", "Chuck Norris can write infinite recursion functions... and have them return."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "No statement can catch the ChuckNorrisException."], ["created_at", "2020-11-17 20:40:37.313236"], ["updated_at", "2020-11-17 20:40:37.313236"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 24]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/questionnaires" for ::1 at 2020-11-17 15:40:41 -0500
+Processing by QuestionnairesController#index as HTML
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 20]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 21]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 22]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 23]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 24]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 60ms (Views: 55.5ms | ActiveRecord: 4.4ms | Allocations: 10590)
+
+
+  [1m[35m (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mQuestion Load (13.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (1.3ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 27]]
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 29]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 30]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 31]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 32]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 33]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 34]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 35]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (1.0ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 36]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 37]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 38]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 39]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 40]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 41]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 42]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 43]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 44]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 45]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 46]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 47]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 48]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 49]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 50]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 51]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestionnaire Load (1.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.3ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 20]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.0ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 21]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 22]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.2ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 23]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 24]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (1.3ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "aggregate strategic experiences"], ["created_at", "2020-11-17 20:41:36.419719"], ["updated_at", "2020-11-17 20:41:36.419719"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris's keyboard doesn't have a Ctrl key because nothing controls Chuck Norris."], ["answer_2", "Chuck Norris solved the Travelling Salesman problem in O(1) time."], ["answer_3", "Chuck Norris can recite π. Backwards."], ["answer_4", "When Chuck Norris presses Ctrl+Alt+Delete, worldwide computer restart is initiated."], ["correct_answer", "When Chuck Norris presses Ctrl+Alt+Delete, worldwide computer restart is initiated."], ["created_at", "2020-11-17 20:41:36.436170"], ["updated_at", "2020-11-17 20:41:36.436170"], ["content", "For Chuck Norris, NP-Hard = O(1)?"], ["questionnaire_id", 25]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris does not use revision control software. None of his code has ever needed revision."], ["answer_2", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_3", "Chuck Norris doesn't bug hunt, as that signifies a probability of failure. He goes bug killing."], ["answer_4", "Chuck Norris' programs occupy 150% of CPU, even when they are not executing."], ["correct_answer", "Chuck Norris does not use revision control software. None of his code has ever needed revision."], ["created_at", "2020-11-17 20:41:36.448295"], ["updated_at", "2020-11-17 20:41:36.448295"], ["content", "You don't disable the Chuck Norris plug-in, it disables you?"], ["questionnaire_id", 25]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Project managers never ask Chuck Norris for estimations... ever."], ["answer_2", "There is no Esc key on Chuck Norris' keyboard, because no one escapes Chuck Norris."], ["answer_3", "Chuck Norris is immutable. If something's going to change, it's going to have to be the rest of the universe."], ["answer_4", "The only pattern Chuck Norris knows is God Object."], ["correct_answer", "When Chuck Norris gives a method an argument, the method loses."], ["created_at", "2020-11-17 20:41:36.460038"], ["updated_at", "2020-11-17 20:41:36.460038"], ["content", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked?"], ["questionnaire_id", 25]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.4ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris can spawn threads that complete before they are started."], ["answer_2", "Chuck Norris can divide by zero."], ["answer_3", "Chuck Norris solved the Travelling Salesman problem in O(1) time."], ["answer_4", "Chuck Norris can spawn threads that complete before they are started."], ["correct_answer", "Chuck Norris can read all encrypted data, because nothing can hide from Chuck Norris."], ["created_at", "2020-11-17 20:41:36.477628"], ["updated_at", "2020-11-17 20:41:36.477628"], ["content", "Chuck Norris solved the Travelling Salesman problem in O(1) time?"], ["questionnaire_id", 25]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "There is no Esc key on Chuck Norris' keyboard, because no one escapes Chuck Norris."], ["answer_2", "Chuck Norris does not use exceptions when programming. He has not been able to identify any of his code that is not exceptional."], ["answer_3", "All arrays Chuck Norris declares are of infinite size, because Chuck Norris knows no bounds."], ["answer_4", "Chuck Norris compresses his files by doing a flying round house kick to the hard drive."], ["correct_answer", "Chuck Norris can't test for equality because he has no equal."], ["created_at", "2020-11-17 20:41:36.488321"], ["updated_at", "2020-11-17 20:41:36.488321"], ["content", "Quantum cryptography does not work on Chuck Norris? When something is being observed by Chuck it stays in the same state until he's finished?"], ["questionnaire_id", 25]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.7ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "facilitate virtual relationships"], ["created_at", "2020-11-17 20:41:36.497875"], ["updated_at", "2020-11-17 20:41:36.497875"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris can solve the Towers of Hanoi in one move."], ["answer_2", "Chuck Norris can't test for equality because he has no equal."], ["answer_3", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["answer_4", "Chuck Norris doesn't need to know about class factory pattern. He can instantiate interfaces."], ["correct_answer", "Chuck Norris doesn't need garbage collection because he doesn't call .Dispose(), he calls .DropKick()."], ["created_at", "2020-11-17 20:41:36.507881"], ["updated_at", "2020-11-17 20:41:36.507881"], ["content", "Chuck Norris doesn't believe in floating point numbers because they can't be typed on his binary keyboard?"], ["questionnaire_id", 26]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris finished World of Warcraft."], ["answer_2", "Chuck Norris can solve the Towers of Hanoi in one move."], ["answer_3", "Chuck Norris can read all encrypted data, because nothing can hide from Chuck Norris."], ["answer_4", "For Chuck Norris, NP-Hard = O(1)."], ["correct_answer", "Chuck Norris can't test for equality because he has no equal."], ["created_at", "2020-11-17 20:41:36.519058"], ["updated_at", "2020-11-17 20:41:36.519058"], ["content", "Chuck Norris can unit test an entire application with a single assert?"], ["questionnaire_id", 26]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris doesn't delete files, he blows them away."], ["answer_2", "Chuck Norris can recite π. Backwards."], ["answer_3", "Chuck Norris can't test for equality because he has no equal."], ["answer_4", "Chuck Norris can recite π. Backwards."], ["correct_answer", "Chuck Norris can compile syntax errors."], ["created_at", "2020-11-17 20:41:36.530665"], ["updated_at", "2020-11-17 20:41:36.530665"], ["content", "Project managers never ask Chuck Norris for estimations??? ever?"], ["questionnaire_id", 26]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "When Chuck Norris points to null, null quakes in fear."], ["answer_2", "Anonymous methods and anonymous types are really all called Chuck Norris. They just don't like to boast."], ["answer_3", "Chuck Norris programs do not accept input."], ["answer_4", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["correct_answer", "Chuck Norris hosting is 101% uptime guaranteed."], ["created_at", "2020-11-17 20:41:36.543864"], ["updated_at", "2020-11-17 20:41:36.543864"], ["content", "Chuck Norris can unit test an entire application with a single assert?"], ["questionnaire_id", 26]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris can't test for equality because he has no equal."], ["answer_2", "Chuck Norris doesn't have performance bottlenecks. He just makes the universe wait its turn."], ["answer_3", "Chuck Norris can use GOTO as much as he wants to. Telling him otherwise is considered harmful."], ["answer_4", "Chuck Norris doesn't get compiler errors, the language changes itself to accommodate Chuck Norris."], ["correct_answer", "Chuck Norris' programs occupy 150% of CPU, even when they are not executing."], ["created_at", "2020-11-17 20:41:36.554176"], ["updated_at", "2020-11-17 20:41:36.554176"], ["content", "Chuck Norris can binary search unsorted data?"], ["questionnaire_id", 26]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.9ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "whiteboard virtual e-business"], ["created_at", "2020-11-17 20:41:36.565418"], ["updated_at", "2020-11-17 20:41:36.565418"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris can access private methods."], ["answer_2", "Chuck Norris burst the dot com bubble."], ["answer_3", "You don't disable the Chuck Norris plug-in, it disables you."], ["answer_4", "Chuck Norris rewrote the Google search engine from scratch."], ["correct_answer", "Chuck Norris doesn't have performance bottlenecks. He just makes the universe wait its turn."], ["created_at", "2020-11-17 20:41:36.576188"], ["updated_at", "2020-11-17 20:41:36.576188"], ["content", "Chuck Norris went out of an infinite loop?"], ["questionnaire_id", 27]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.4ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris can divide by zero."], ["answer_2", "Chuck Norris solved the Travelling Salesman problem in O(1) time."], ["answer_3", "Chuck Norris went out of an infinite loop."], ["answer_4", "Chuck Norris can divide by zero."], ["correct_answer", "Chuck Norris doesn't pair program."], ["created_at", "2020-11-17 20:41:36.586231"], ["updated_at", "2020-11-17 20:41:36.586231"], ["content", "No statement can catch the ChuckNorrisException?"], ["questionnaire_id", 27]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris doesn't need an OS."], ["answer_2", "There is nothing regular about Chuck Norris' expressions."], ["answer_3", "Chuck Norris is immutable. If something's going to change, it's going to have to be the rest of the universe."], ["answer_4", "Chuck Norris doesn't need garbage collection because he doesn't call .Dispose(), he calls .DropKick()."], ["correct_answer", "Chuck Norris doesn't need the cloud to scale his applications, he uses his laptop."], ["created_at", "2020-11-17 20:41:36.596981"], ["updated_at", "2020-11-17 20:41:36.596981"], ["content", "Chuck Norris doesn't delete files, he blows them away?"], ["questionnaire_id", 27]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris doesn't bug hunt, as that signifies a probability of failure. He goes bug killing."], ["answer_2", "There is no need to try catching Chuck Norris' exceptions for recovery; every single throw he does is fatal."], ["answer_3", "Chuck Norris's keyboard doesn't have a Ctrl key because nothing controls Chuck Norris."], ["answer_4", "There is nothing regular about Chuck Norris' expressions."], ["correct_answer", "Chuck Norris can read all encrypted data, because nothing can hide from Chuck Norris."], ["created_at", "2020-11-17 20:41:36.606988"], ["updated_at", "2020-11-17 20:41:36.606988"], ["content", "Chuck Norris doesn't need an OS?"], ["questionnaire_id", 27]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris doesn't program with a keyboard. He stares the computer down until it does what he wants."], ["answer_2", "There is nothing regular about Chuck Norris' expressions."], ["answer_3", "Chuck Norris doesn't believe in floating point numbers because they can't be typed on his binary keyboard."], ["answer_4", "There is no Esc key on Chuck Norris' keyboard, because no one escapes Chuck Norris."], ["correct_answer", "Chuck Norris compresses his files by doing a flying round house kick to the hard drive."], ["created_at", "2020-11-17 20:41:36.618115"], ["updated_at", "2020-11-17 20:41:36.618115"], ["content", "Chuck Norris can instantiate an abstract class?"], ["questionnaire_id", 27]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.8ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "facilitate sticky methodologies"], ["created_at", "2020-11-17 20:41:36.631075"], ["updated_at", "2020-11-17 20:41:36.631075"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris doesn't believe in floating point numbers because they can't be typed on his binary keyboard."], ["answer_2", "When Chuck Norris points to null, null quakes in fear."], ["answer_3", "Chuck Norris doesn't need to know about class factory pattern. He can instantiate interfaces."], ["answer_4", "Chuck Norris knows the last digit of PI."], ["correct_answer", "Chuck Norris can use GOTO as much as he wants to. Telling him otherwise is considered harmful."], ["created_at", "2020-11-17 20:41:36.647295"], ["updated_at", "2020-11-17 20:41:36.647295"], ["content", "For Chuck Norris, NP-Hard = O(1)?"], ["questionnaire_id", 28]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "For Chuck Norris, NP-Hard = O(1)."], ["answer_2", "Chuck Norris can read all encrypted data, because nothing can hide from Chuck Norris."], ["answer_3", "Chuck Norris doesn't need an OS."], ["answer_4", "Chuck Norris never gets a syntax error. Instead, the language gets a DoesNotConformToChuck error."], ["correct_answer", "Chuck Norris can read all encrypted data, because nothing can hide from Chuck Norris."], ["created_at", "2020-11-17 20:41:36.659418"], ["updated_at", "2020-11-17 20:41:36.659418"], ["content", "All arrays Chuck Norris declares are of infinite size, because Chuck Norris knows no bounds?"], ["questionnaire_id", 28]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "For Chuck Norris, NP-Hard = O(1)."], ["answer_2", "Chuck Norris doesn't need to know about class factory pattern. He can instantiate interfaces."], ["answer_3", "Chuck Norris doesn't need the cloud to scale his applications, he uses his laptop."], ["answer_4", "All browsers support the hex definitions #chuck and #norris for the colors black and blue."], ["correct_answer", "Chuck Norris is immutable. If something's going to change, it's going to have to be the rest of the universe."], ["created_at", "2020-11-17 20:41:36.694582"], ["updated_at", "2020-11-17 20:41:36.694582"], ["content", "When Chuck Norris' code fails to compile the compiler apologises?"], ["questionnaire_id", 28]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris's keyboard doesn't have a Ctrl key because nothing controls Chuck Norris."], ["answer_2", "Project managers never ask Chuck Norris for estimations... ever."], ["answer_3", "Chuck Norris doesn't need a java compiler, he goes straight to .war"], ["answer_4", "The class object inherits from Chuck Norris."], ["correct_answer", "Chuck Norris programs do not accept input."], ["created_at", "2020-11-17 20:41:36.708188"], ["updated_at", "2020-11-17 20:41:36.708188"], ["content", "The class object inherits from Chuck Norris?"], ["questionnaire_id", 28]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "When Chuck Norris presses Ctrl+Alt+Delete, worldwide computer restart is initiated."], ["answer_2", "There is no Esc key on Chuck Norris' keyboard, because no one escapes Chuck Norris."], ["answer_3", "The programs that Chuck Norris writes don't have version numbers because he only writes them once. If a user reports a bug or has a feature request they don't live to see the sun set."], ["answer_4", "Chuck Norris does not use exceptions when programming. He has not been able to identify any of his code that is not exceptional."], ["correct_answer", "Chuck Norris can write multi-threaded applications with a single thread."], ["created_at", "2020-11-17 20:41:36.719078"], ["updated_at", "2020-11-17 20:41:36.719078"], ["content", "Project managers never ask Chuck Norris for estimations??? ever?"], ["questionnaire_id", 28]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.7ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "engage out-of-the-box relationships"], ["created_at", "2020-11-17 20:41:36.732400"], ["updated_at", "2020-11-17 20:41:36.732400"]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.2ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help."], ["answer_2", "All arrays Chuck Norris declares are of infinite size, because Chuck Norris knows no bounds."], ["answer_3", "The programs that Chuck Norris writes don't have version numbers because he only writes them once. If a user reports a bug or has a feature request they don't live to see the sun set."], ["answer_4", "Chuck Norris is immutable. If something's going to change, it's going to have to be the rest of the universe."], ["correct_answer", "Chuck Norris doesn't use a computer because a computer does everything slower than Chuck Norris."], ["created_at", "2020-11-17 20:41:36.747974"], ["updated_at", "2020-11-17 20:41:36.747974"], ["content", "Chuck Norris can spawn threads that complete before they are started?"], ["questionnaire_id", 29]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "All browsers support the hex definitions #chuck and #norris for the colors black and blue."], ["answer_2", "\"It works on my machine\" always holds true for Chuck Norris."], ["answer_3", "Chuck Norris doesn't bug hunt, as that signifies a probability of failure. He goes bug killing."], ["answer_4", "Chuck Norris can read all encrypted data, because nothing can hide from Chuck Norris."], ["correct_answer", "Whiteboards are white because Chuck Norris scared them that way."], ["created_at", "2020-11-17 20:41:36.759448"], ["updated_at", "2020-11-17 20:41:36.759448"], ["content", "For Chuck Norris, NP-Hard = O(1)?"], ["questionnaire_id", 29]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' preferred IDE is hexedit."], ["answer_2", "For Chuck Norris, NP-Hard = O(1)."], ["answer_3", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["answer_4", "Chuck Norris can instantiate an abstract class."], ["correct_answer", "Chuck Norris is immutable. If something's going to change, it's going to have to be the rest of the universe."], ["created_at", "2020-11-17 20:41:36.772693"], ["updated_at", "2020-11-17 20:41:36.772693"], ["content", "Chuck Norris' preferred IDE is hexedit?"], ["questionnaire_id", 29]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris never gets a syntax error. Instead, the language gets a DoesNotConformToChuck error."], ["answer_2", "Chuck Norris can access the DB from the UI."], ["answer_3", "Chuck Norris doesn't pair program."], ["answer_4", "There is no Esc key on Chuck Norris' keyboard, because no one escapes Chuck Norris."], ["correct_answer", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["created_at", "2020-11-17 20:41:36.784969"], ["updated_at", "2020-11-17 20:41:36.784969"], ["content", "Chuck Norris doesn't have performance bottlenecks? He just makes the universe wait its turn?"], ["questionnaire_id", 29]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "No statement can catch the ChuckNorrisException."], ["answer_2", "Chuck Norris doesn't need the cloud to scale his applications, he uses his laptop."], ["answer_3", "The class object inherits from Chuck Norris."], ["answer_4", "Chuck Norris can access the DB from the UI."], ["correct_answer", "Chuck Norris can divide by zero."], ["created_at", "2020-11-17 20:41:36.794765"], ["updated_at", "2020-11-17 20:41:36.794765"], ["content", "Chuck Norris' programs occupy 150% of CPU, even when they are not executing?"], ["questionnaire_id", 29]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/questionnaires" for ::1 at 2020-11-17 15:41:46 -0500
+Processing by QuestionnairesController#index as HTML
+  [1m[36mQuestionnaire Load (1.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (2.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 25]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 26]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 27]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 28]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 29]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 91ms (Views: 82.0ms | ActiveRecord: 7.3ms | Allocations: 10575)
+
+
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mQuestion Load (15.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (1.0ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 52]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 53]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 54]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 55]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (1.2ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 56]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.6ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 57]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 58]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 59]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 60]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 61]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 62]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 63]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 64]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (1.0ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 65]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 66]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 67]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 68]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 69]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 70]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.9ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 71]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 72]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.7ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 73]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 74]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (1.1ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 75]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Destroy (0.8ms)[0m  [1m[31mDELETE FROM "questions" WHERE "questions"."id" = $1[0m  [["id", 76]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestionnaire Load (1.6ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.4ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 25]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.0ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 26]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.0ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 27]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.0ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 28]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (1.1ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 29]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (1.2ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Extend Ubiquitous Solutions"], ["created_at", "2020-11-17 20:42:43.880617"], ["updated_at", "2020-11-17 20:42:43.880617"]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.4ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' protocol design method has no status, requests or responses, only commands."], ["answer_2", "When Chuck Norris gives a method an argument, the method loses."], ["answer_3", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help."], ["answer_4", "Chuck Norris's beard can type 140 wpm."], ["correct_answer", "For Chuck Norris, NP-Hard = O(1)."], ["created_at", "2020-11-17 20:42:43.896698"], ["updated_at", "2020-11-17 20:42:43.896698"], ["content", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help?"], ["questionnaire_id", 30]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris knows the last digit of PI."], ["answer_2", "Chuck Norris doesn't bug hunt, as that signifies a probability of failure. He goes bug killing."], ["answer_3", "Chuck Norris doesn't pair program."], ["answer_4", "No statement can catch the ChuckNorrisException."], ["correct_answer", "Quantum cryptography does not work on Chuck Norris. When something is being observed by Chuck it stays in the same state until he's finished."], ["created_at", "2020-11-17 20:42:43.909125"], ["updated_at", "2020-11-17 20:42:43.909125"], ["content", "Chuck Norris can write infinite recursion functions??? and have them return?"], ["questionnaire_id", 30]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.3ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris does not use revision control software. None of his code has ever needed revision."], ["answer_2", "Chuck Norris went out of an infinite loop."], ["answer_3", "Chuck Norris can instantiate an abstract class."], ["answer_4", "The class object inherits from Chuck Norris."], ["correct_answer", "The class object inherits from Chuck Norris."], ["created_at", "2020-11-17 20:42:43.919247"], ["updated_at", "2020-11-17 20:42:43.919247"], ["content", "Chuck Norris doesn't need garbage collection because he doesn't call ?Dispose(), he calls ?DropKick()?"], ["questionnaire_id", 30]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris hosting is 101% uptime guaranteed."], ["answer_2", "Chuck Norris's keyboard doesn't have a Ctrl key because nothing controls Chuck Norris."], ["answer_3", "For Chuck Norris, NP-Hard = O(1)."], ["answer_4", "Chuck Norris's first program was kill -9."], ["correct_answer", "Chuck Norris doesn't need the cloud to scale his applications, he uses his laptop."], ["created_at", "2020-11-17 20:42:43.929398"], ["updated_at", "2020-11-17 20:42:43.929398"], ["content", "Chuck Norris doesn't believe in floating point numbers because they can't be typed on his binary keyboard?"], ["questionnaire_id", 30]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris doesn't use a computer because a computer does everything slower than Chuck Norris."], ["answer_2", "Chuck Norris doesn't use web standards as the web will conform to him."], ["answer_3", "When Chuck Norris gives a method an argument, the method loses."], ["answer_4", "You don't disable the Chuck Norris plug-in, it disables you."], ["correct_answer", "When Chuck Norris gives a method an argument, the method loses."], ["created_at", "2020-11-17 20:42:43.940598"], ["updated_at", "2020-11-17 20:42:43.940598"], ["content", "Chuck Norris' beard is immutable?"], ["questionnaire_id", 30]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.7ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Integrate Impactful Models"], ["created_at", "2020-11-17 20:42:43.950495"], ["updated_at", "2020-11-17 20:42:43.950495"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "For Chuck Norris, NP-Hard = O(1)."], ["answer_2", "When Chuck Norris' code fails to compile the compiler apologises."], ["answer_3", "All arrays Chuck Norris declares are of infinite size, because Chuck Norris knows no bounds."], ["answer_4", "Chuck Norris can write infinite recursion functions... and have them return."], ["correct_answer", "Chuck Norris finished World of Warcraft."], ["created_at", "2020-11-17 20:42:43.959641"], ["updated_at", "2020-11-17 20:42:43.959641"], ["content", "Chuck Norris can divide by zero?"], ["questionnaire_id", 31]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris can use GOTO as much as he wants to. Telling him otherwise is considered harmful."], ["answer_2", "For Chuck Norris, NP-Hard = O(1)."], ["answer_3", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses."], ["answer_4", "Chuck Norris burst the dot com bubble."], ["correct_answer", "Chuck Norris doesn't bug hunt, as that signifies a probability of failure. He goes bug killing."], ["created_at", "2020-11-17 20:42:43.969198"], ["updated_at", "2020-11-17 20:42:43.969198"], ["content", "Chuck Norris doesn't need a debugger, he just stares down the bug until the code confesses?"], ["questionnaire_id", 31]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' preferred IDE is hexedit."], ["answer_2", "You don't disable the Chuck Norris plug-in, it disables you."], ["answer_3", "There is nothing regular about Chuck Norris' expressions."], ["answer_4", "Chuck Norris has root access to your system."], ["correct_answer", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help."], ["created_at", "2020-11-17 20:42:43.978942"], ["updated_at", "2020-11-17 20:42:43.978942"], ["content", "Chuck Norris doesn't need garbage collection because he doesn't call ?Dispose(), he calls ?DropKick()?"], ["questionnaire_id", 31]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "There is nothing regular about Chuck Norris' expressions."], ["answer_2", "Chuck Norris hosting is 101% uptime guaranteed."], ["answer_3", "Chuck Norris doesn't need garbage collection because he doesn't call .Dispose(), he calls .DropKick()."], ["answer_4", "Anonymous methods and anonymous types are really all called Chuck Norris. They just don't like to boast."], ["correct_answer", "Chuck Norris doesn't delete files, he blows them away."], ["created_at", "2020-11-17 20:42:43.988198"], ["updated_at", "2020-11-17 20:42:43.988198"], ["content", "Chuck Norris knows the last digit of PI?"], ["questionnaire_id", 31]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "There is no need to try catching Chuck Norris' exceptions for recovery; every single throw he does is fatal."], ["answer_2", "Chuck Norris can binary search unsorted data."], ["answer_3", "Chuck Norris is immutable. If something's going to change, it's going to have to be the rest of the universe."], ["answer_4", "Chuck Norris' preferred IDE is hexedit."], ["correct_answer", "Chuck Norris doesn't pair program."], ["created_at", "2020-11-17 20:42:43.997729"], ["updated_at", "2020-11-17 20:42:43.997729"], ["content", "Chuck Norris doesn't need an OS?"], ["questionnaire_id", 31]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.6ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Unleash 24/365 Metrics"], ["created_at", "2020-11-17 20:42:44.007184"], ["updated_at", "2020-11-17 20:42:44.007184"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris doesn't need garbage collection because he doesn't call .Dispose(), he calls .DropKick()."], ["answer_2", "Chuck Norris can't test for equality because he has no equal."], ["answer_3", "Chuck Norris can recite π. Backwards."], ["answer_4", "Chuck Norris can write multi-threaded applications with a single thread."], ["correct_answer", "The programs that Chuck Norris writes don't have version numbers because he only writes them once. If a user reports a bug or has a feature request they don't live to see the sun set."], ["created_at", "2020-11-17 20:42:44.017146"], ["updated_at", "2020-11-17 20:42:44.017146"], ["content", "The programs that Chuck Norris writes don't have version numbers because he only writes them once? If a user reports a bug or has a feature request they don't live to see the sun set?"], ["questionnaire_id", 32]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help."], ["answer_2", "Chuck Norris doesn't need a java compiler, he goes straight to .war"], ["answer_3", "Chuck Norris doesn't have performance bottlenecks. He just makes the universe wait its turn."], ["answer_4", "When Chuck Norris points to null, null quakes in fear."], ["correct_answer", "Chuck Norris doesn't believe in floating point numbers because they can't be typed on his binary keyboard."], ["created_at", "2020-11-17 20:42:44.027083"], ["updated_at", "2020-11-17 20:42:44.027083"], ["content", "Chuck Norris can spawn threads that complete before they are started?"], ["questionnaire_id", 32]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "There is no need to try catching Chuck Norris' exceptions for recovery; every single throw he does is fatal."], ["answer_2", "Chuck Norris' addition operator doesn't commute; it teleports to where he needs it to be."], ["answer_3", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["answer_4", "Quantum cryptography does not work on Chuck Norris. When something is being observed by Chuck it stays in the same state until he's finished."], ["correct_answer", "Chuck Norris doesn't believe in floating point numbers because they can't be typed on his binary keyboard."], ["created_at", "2020-11-17 20:42:44.041408"], ["updated_at", "2020-11-17 20:42:44.041408"], ["content", "Chuck Norris doesn't need the cloud to scale his applications, he uses his laptop?"], ["questionnaire_id", 32]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "For Chuck Norris, NP-Hard = O(1)."], ["answer_2", "When Chuck Norris points to null, null quakes in fear."], ["answer_3", "Chuck Norris' programs occupy 150% of CPU, even when they are not executing."], ["answer_4", "For Chuck Norris, NP-Hard = O(1)."], ["correct_answer", "Chuck Norris can solve the Towers of Hanoi in one move."], ["created_at", "2020-11-17 20:42:44.051459"], ["updated_at", "2020-11-17 20:42:44.051459"], ["content", "Chuck Norris doesn't pair program?"], ["questionnaire_id", 32]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.7ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help."], ["answer_2", "Chuck Norris went out of an infinite loop."], ["answer_3", "When Chuck Norris gives a method an argument, the method loses."], ["answer_4", "Chuck Norris does not use exceptions when programming. He has not been able to identify any of his code that is not exceptional."], ["correct_answer", "Chuck Norris can write multi-threaded applications with a single thread."], ["created_at", "2020-11-17 20:42:44.060847"], ["updated_at", "2020-11-17 20:42:44.060847"], ["content", "Chuck Norris can binary search unsorted data?"], ["questionnaire_id", 32]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.6ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "Architect Magnetic E Commerce"], ["created_at", "2020-11-17 20:42:44.070749"], ["updated_at", "2020-11-17 20:42:44.070749"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "There is no need to try catching Chuck Norris' exceptions for recovery; every single throw he does is fatal."], ["answer_2", "Chuck Norris does not use exceptions when programming. He has not been able to identify any of his code that is not exceptional."], ["answer_3", "Chuck Norris doesn't pair program."], ["answer_4", "Whiteboards are white because Chuck Norris scared them that way."], ["correct_answer", "There is no need to try catching Chuck Norris' exceptions for recovery; every single throw he does is fatal."], ["created_at", "2020-11-17 20:42:44.080112"], ["updated_at", "2020-11-17 20:42:44.080112"], ["content", "Chuck Norris went out of an infinite loop?"], ["questionnaire_id", 33]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.0ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris can spawn threads that complete before they are started."], ["answer_2", "Chuck Norris writes code that optimizes itself."], ["answer_3", "Chuck Norris can solve the Towers of Hanoi in one move."], ["answer_4", "You don't disable the Chuck Norris plug-in, it disables you."], ["correct_answer", "There is nothing regular about Chuck Norris' expressions."], ["created_at", "2020-11-17 20:42:44.089620"], ["updated_at", "2020-11-17 20:42:44.089620"], ["content", "The class object inherits from Chuck Norris?"], ["questionnaire_id", 33]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "When Chuck Norris gives a method an argument, the method loses."], ["answer_2", "Quantum cryptography does not work on Chuck Norris. When something is being observed by Chuck it stays in the same state until he's finished."], ["answer_3", "Chuck Norris' protocol design method has no status, requests or responses, only commands."], ["answer_4", "Chuck Norris can instantiate an abstract class."], ["correct_answer", "The programs that Chuck Norris writes don't have version numbers because he only writes them once. If a user reports a bug or has a feature request they don't live to see the sun set."], ["created_at", "2020-11-17 20:42:44.103694"], ["updated_at", "2020-11-17 20:42:44.103694"], ["content", "Chuck Norris doesn't use a computer because a computer does everything slower than Chuck Norris?"], ["questionnaire_id", 33]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris can unit test an entire application with a single assert."], ["answer_2", "Whiteboards are white because Chuck Norris scared them that way."], ["answer_3", "Chuck Norris programs do not accept input."], ["answer_4", "For Chuck Norris, NP-Hard = O(1)."], ["correct_answer", "Chuck Norris solved the Travelling Salesman problem in O(1) time."], ["created_at", "2020-11-17 20:42:44.116651"], ["updated_at", "2020-11-17 20:42:44.116651"], ["content", "When Chuck Norris' code fails to compile the compiler apologises?"], ["questionnaire_id", 33]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (1.1ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris rewrote the Google search engine from scratch."], ["answer_2", "When Chuck Norris' code fails to compile the compiler apologises."], ["answer_3", "Chuck Norris doesn't program with a keyboard. He stares the computer down until it does what he wants."], ["answer_4", "All arrays Chuck Norris declares are of infinite size, because Chuck Norris knows no bounds."], ["correct_answer", "Chuck Norris can divide by zero."], ["created_at", "2020-11-17 20:42:44.126966"], ["updated_at", "2020-11-17 20:42:44.126966"], ["content", "When Chuck Norris' code fails to compile the compiler apologises?"], ["questionnaire_id", 33]]
+  [1m[35m (0.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Create (0.9ms)[0m  [1m[32mINSERT INTO "questionnaires" ("title", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["title", "E Enable B2 B Applications"], ["created_at", "2020-11-17 20:42:44.155189"], ["updated_at", "2020-11-17 20:42:44.155189"]]
+  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "There is no need to try catching Chuck Norris' exceptions for recovery; every single throw he does is fatal."], ["answer_2", "No statement can catch the ChuckNorrisException."], ["answer_3", "Project managers never ask Chuck Norris for estimations... ever."], ["answer_4", "Chuck Norris never gets a syntax error. Instead, the language gets a DoesNotConformToChuck error."], ["correct_answer", "Chuck Norris doesn't pair program."], ["created_at", "2020-11-17 20:42:44.170362"], ["updated_at", "2020-11-17 20:42:44.170362"], ["content", "Chuck Norris does not use exceptions when programming? He has not been able to identify any of his code that is not exceptional?"], ["questionnaire_id", 34]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris' addition operator doesn't commute; it teleports to where he needs it to be."], ["answer_2", "Chuck Norris can unit test an entire application with a single assert."], ["answer_3", "Chuck Norris's beard can type 140 wpm."], ["answer_4", "Chuck Norris finished World of Warcraft."], ["correct_answer", "Chuck Norris' preferred IDE is hexedit."], ["created_at", "2020-11-17 20:42:44.183339"], ["updated_at", "2020-11-17 20:42:44.183339"], ["content", "Chuck Norris doesn't use web standards as the web will conform to him?"], ["questionnaire_id", 34]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.9ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris doesn't need to know about class factory pattern. He can instantiate interfaces."], ["answer_2", "For Chuck Norris, NP-Hard = O(1)."], ["answer_3", "There is no need to try catching Chuck Norris' exceptions for recovery; every single throw he does is fatal."], ["answer_4", "The class object inherits from Chuck Norris."], ["correct_answer", "Chuck Norris went out of an infinite loop."], ["created_at", "2020-11-17 20:42:44.193299"], ["updated_at", "2020-11-17 20:42:44.193299"], ["content", "Chuck Norris can binary search unsorted data?"], ["questionnaire_id", 34]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "When Chuck Norris' code fails to compile the compiler apologises."], ["answer_2", "Chuck Norris has root access to your system."], ["answer_3", "There is nothing regular about Chuck Norris' expressions."], ["answer_4", "Chuck Norris can recite π. Backwards."], ["correct_answer", "Chuck Norris does not use revision control software. None of his code has ever needed revision."], ["created_at", "2020-11-17 20:42:44.202235"], ["updated_at", "2020-11-17 20:42:44.202235"], ["content", "Chuck Norris never gets a syntax error? Instead, the language gets a DoesNotConformToChuck error?"], ["questionnaire_id", 34]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestion Create (0.8ms)[0m  [1m[32mINSERT INTO "questions" ("answer_1", "answer_2", "answer_3", "answer_4", "correct_answer", "created_at", "updated_at", "content", "questionnaire_id") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["answer_1", "Chuck Norris doesn't need the cloud to scale his applications, he uses his laptop."], ["answer_2", "All browsers support the hex definitions #chuck and #norris for the colors black and blue."], ["answer_3", "When Chuck Norris gives a method an argument, the method loses."], ["answer_4", "There is nothing regular about Chuck Norris' expressions."], ["correct_answer", "Chuck Norris can access private methods."], ["created_at", "2020-11-17 20:42:44.211232"], ["updated_at", "2020-11-17 20:42:44.211232"], ["content", "Chuck Norris doesn't pair program?"], ["questionnaire_id", 34]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Started GET "/questionnaires" for ::1 at 2020-11-17 15:42:58 -0500
+Processing by QuestionnairesController#index as HTML
+  [1m[36mQuestionnaire Load (1.4ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 30]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 31]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 32]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 33]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 34]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 29ms (Views: 24.5ms | ActiveRecord: 4.6ms | Allocations: 10570)
+
+
