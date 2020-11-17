@@ -489,3 +489,174 @@ Processing by QuestionsController#show as HTML
 Completed 200 OK in 172ms (Views: 35.8ms | ActiveRecord: 15.0ms | Allocations: 360431)
 
 
+Started GET "/" for ::1 at 2020-11-17 13:19:29 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 73.7ms | Allocations: 183203)
+Completed 200 OK in 249ms (Views: 177.3ms | ActiveRecord: 0.0ms | Allocations: 908678)
+
+
+Started GET "/questions" for ::1 at 2020-11-17 13:19:36 -0500
+  
+SyntaxError (/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questions_controller.rb:4: syntax error, unexpected '}', expecting =>
+...s, :include => {:questionnaire}
+...                              ^
+/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questions_controller.rb:11: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/questions_controller.rb:4: syntax error, unexpected '}', expecting =>
+app/controllers/questions_controller.rb:11: syntax error, unexpected end-of-input, expecting end
+app/controllers/questions_controller.rb:4: syntax error, unexpected '}', expecting =>
+app/controllers/questions_controller.rb:11: syntax error, unexpected end-of-input, expecting end
+Started GET "/questions" for ::1 at 2020-11-17 13:19:46 -0500
+Processing by QuestionsController#index as HTML
+  [1m[36mQuestion Load (24.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions"[0m
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+  [1m[36mQuestionnaire Load (6.4ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" WHERE "questionnaires"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/questions_controller.rb:4:in `index'
+Completed 200 OK in 1053ms (Views: 885.6ms | ActiveRecord: 103.9ms | Allocations: 3734289)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-17 13:20:49 -0500
+Processing by QuestionnairesController#index as HTML
+  [1m[36mQuestionnaire Load (3.3ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (2.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 1]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (2.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 2]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 1109ms (Views: 964.5ms | ActiveRecord: 42.6ms | Allocations: 4062748)
+
+
+Started GET "/questionnaires/2" for ::1 at 2020-11-17 13:21:56 -0500
+Processing by QuestionnairesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestionnaire Load (2.6ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" WHERE "questionnaires"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/questionnaires_controller.rb:8:in `show'
+  [1m[36mQuestion Load (7.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 2]]
+  ↳ app/controllers/questionnaires_controller.rb:9:in `show'
+Completed 200 OK in 891ms (Views: 531.6ms | ActiveRecord: 46.4ms | Allocations: 3653909)
+
+
+Started GET "/questionnaires/2" for ::1 at 2020-11-17 13:23:28 -0500
+Processing by QuestionnairesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestionnaire Load (2.4ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" WHERE "questionnaires"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/questionnaires_controller.rb:8:in `show'
+Completed 500 Internal Server Error in 3207ms (ActiveRecord: 21.6ms | Allocations: 13468408)
+
+
+  
+NameError (undefined local variable or method `except' for #<QuestionnairesController:0x00007fffd0b2d4f0>
+Did you mean?  exec):
+  
+app/controllers/questionnaires_controller.rb:9:in `show'
+Started GET "/questionnaires/2" for ::1 at 2020-11-17 13:23:48 -0500
+Processing by QuestionnairesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestionnaire Load (2.4ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" WHERE "questionnaires"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/questionnaires_controller.rb:8:in `show'
+  [1m[36mQuestion Load (2.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 2]]
+  ↳ app/controllers/questionnaires_controller.rb:9:in `show'
+Completed 200 OK in 851ms (Views: 526.5ms | ActiveRecord: 42.4ms | Allocations: 3635689)
+
+
+Started GET "/questionnaires/2" for ::1 at 2020-11-17 13:24:29 -0500
+  
+SyntaxError (/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '{', expecting end
+...naire, :include => :questions {:except => [:created_at, :upd...
+...                              ^
+/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '}', expecting end
+... => [:created_at, :updated_at]}
+...                              ^):
+  
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '{', expecting end
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '}', expecting end
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '{', expecting end
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '}', expecting end
+Started GET "/questionnaires/2" for ::1 at 2020-11-17 13:25:13 -0500
+  
+SyntaxError (/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '{', expecting =>
+...aire, :include => {:questions {:except => [:created_at, :upd...
+...                              ^
+/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '}', expecting end
+... => [:created_at, :updated_at]}}
+...                              ^):
+  
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '{', expecting =>
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '}', expecting end
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '{', expecting =>
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '}', expecting end
+Started GET "/questionnaires/2" for ::1 at 2020-11-17 13:25:21 -0500
+  
+SyntaxError (/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '{', expecting =>
+...aire, :include => {:questions {:except => [:created_at, :upd...
+...                              ^
+/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '}', expecting end
+... => [:created_at, :updated_at]}}
+...                              ^):
+  
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '{', expecting =>
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '}', expecting end
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '{', expecting =>
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '}', expecting end
+Started GET "/questionnaires/2" for ::1 at 2020-11-17 13:25:46 -0500
+  
+SyntaxError (/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questionnaires_controller.rb:9: syntax error, unexpected =>, expecting '}'
+...de => {:questions => :except => [:created_at, :updated_at]}
+...                             ^~
+/mnt/c/Users/Zach/dev/flatiron/labs/_projects/Impossible-Questionnaire/backend/app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '}', expecting end
+... => [:created_at, :updated_at]}
+...                              ^):
+  
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected =>, expecting '}'
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '}', expecting end
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected =>, expecting '}'
+app/controllers/questionnaires_controller.rb:9: syntax error, unexpected '}', expecting end
+Started GET "/questionnaires/2" for ::1 at 2020-11-17 13:29:01 -0500
+Processing by QuestionnairesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestionnaire Load (3.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" WHERE "questionnaires"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/questionnaires_controller.rb:8:in `show'
+  [1m[36mQuestion Load (3.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 2]]
+  ↳ app/controllers/questionnaires_controller.rb:9:in `show'
+Completed 200 OK in 927ms (Views: 531.2ms | ActiveRecord: 74.8ms | Allocations: 3739439)
+
+
+Started GET "/questionnaires/2" for ::1 at 2020-11-17 13:29:26 -0500
+Processing by QuestionnairesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mQuestionnaire Load (2.6ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" WHERE "questionnaires"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/questionnaires_controller.rb:8:in `show'
+  [1m[36mQuestion Load (12.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 2]]
+Started GET "/questionnaires" for ::1 at 2020-11-17 13:29:30 -0500
+  ↳ app/controllers/questionnaires_controller.rb:9:in `show'
+Completed 200 OK in 869ms (Views: 512.4ms | ActiveRecord: 52.3ms | Allocations: 3775658)
+
+
+Processing by QuestionnairesController#index as HTML
+  [1m[36mQuestionnaire Load (2.6ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (3.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 1]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (8.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 2]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 970ms (Views: 842.0ms | ActiveRecord: 46.4ms | Allocations: 4003605)
+
+
+  [1m[36mQuestionnaire Load (1.2ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mQuestion Load (1.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1 LIMIT $2[0m  [["questionnaire_id", 1], ["LIMIT", 11]]
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mQuestionnaire Destroy (4.0ms)[0m  [1m[31mDELETE FROM "questionnaires" WHERE "questionnaires"."id" = $1[0m  [["id", 1]]
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started GET "/questionnaires" for ::1 at 2020-11-17 13:31:06 -0500
+Processing by QuestionnairesController#index as HTML
+  [1m[36mQuestionnaire Load (2.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires"[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (7.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 2]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 195ms (Views: 173.0ms | ActiveRecord: 10.2ms | Allocations: 872572)
+
+
