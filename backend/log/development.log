@@ -308,3 +308,5 @@ Processing by QuestionsController#index as HTML
 Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.8ms | Allocations: 1019)
 
 
+  [1m[36mQuestion Load (18.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mQuestion Load (13.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" LIMIT $1[0m  [["LIMIT", 11]]
