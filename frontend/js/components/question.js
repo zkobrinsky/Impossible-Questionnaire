@@ -35,7 +35,7 @@ class Question {
                                 <input type="radio" aria-label="Radio button for following text input" name="check${this.id}">
                             </div>
                         </div>
-                        <input disabled type="text" class="form-control" id="input-field" aria-label="Text input with radio button" value='${this.answers[answer]}'>
+                        <input disabled type="text" class="form-control" id="input-field" aria-label="Text input with radio button" value="${this.answers[answer]}">
                     </div>
                     </br>`
                     )
@@ -47,7 +47,7 @@ class Question {
                                     <input type="radio" aria-label="Radio button for following text input">
                                 </div>
                             </div>
-                            <input type="text" class="form-control" id="input-field" aria-label="Text input with radio button" value='${this.answers[answer]}'>
+                            <input type="text" class="form-control" id="input-field" aria-label="Text input with radio button" value="${this.answers[answer]}">
                         </div>
                         </br>`
                     )
