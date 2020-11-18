@@ -28,6 +28,11 @@
 .form-control {
     word-wrap: break-word;
 }
+
+.description {
+    opacity: 60%;
+    font-style: italic;
+}
 /* 
 .input-group[answertype=wrong] {
     display:none;
