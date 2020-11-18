@@ -47,17 +47,46 @@
         </div>
       </nav>
         <div class="container">
-            <h1 id="change-this">Hello, world!</h1>
-            <p>checking it out</p>
+            <h1 id="change-this">Questionnaire Title</h1>
+            <p>Question1</p>
 
-            <div class="input-group" id="radio">
+
+              <div class="input-group" id="radio">
                 <div class="input-group-prepend">
                   <div class="input-group-text">
-                  <input type="radio" aria-label="Radio button for following text input">
+                  <input type="radio" aria-label="Radio button for following text input" name="check1">
                   </div>
                 </div>
-                <input type="text" class="form-control" id="input-field" aria-label="Text input with radio button" value= "Bigly huge amazing president">
+                <input disabled type="text" class="form-control" id="input-field" aria-label="Text input with radio button" value="Bigly huge amazing president">
               </div>
+            </br>
+              <div class="input-group" id="radio">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                  <input type="radio" aria-label="Radio button for following text input" name="check1">
+                  </div>
+                </div>
+                <input disabled type="text" class="form-control" id="input-field" aria-label="Text input with radio button" value= "Bigly huge amazing president">
+              </div>
+            </br>
+              <div class="input-group" id="radio">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                  <input type="radio" aria-label="Radio button for following text input" name="check1">
+                  </div>
+                </div>
+                <input disabled type="text" class="form-control" id="input-field" aria-label="Text input with radio button" value= "Bigly huge amazing president">
+              </div>
+            </br>
+              <div class="input-group" id="correct_answer">
+                <div class="input-group-prepend">
+                  <div class="input-group-text">
+                  <input type="radio" aria-label="Radio button for following text input" name="check1">
+                  </div>
+                </div>
+                <input disabled type="text" class="form-control" id="input-field" aria-label="Text input with radio button" value= "Bigly huge amazing president">
+              </div>
+            </br>
         </div>
 
         <div class="container">
@@ -65,8 +94,9 @@
         </div>
     
         
-
-    <!-- Optional JavaScript -->
+    <script type="text/javascript" src="js/services/api.js"></script>
+    <script type="text/javascript" src="js/components/question.js"></script>
+    <script type="text/javascript" src="js/components/questionnaire.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
