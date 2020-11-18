@@ -1,20 +1,34 @@
 #change-this {
-    color: green;
+    color: black;
 }
 
 #change-this:hover {
     opacity: 50%;
-    margin-top: 30px;
+    /* margin-top: 30px; */
 }
 
 .container {
     padding: 0 40px;
 }
-
-
-
-
-/* #radio:hover {
-    margin-top: 80px;
+/* 
+#radio1 {
+    border: solid 1px;
 } */
+
+#radio1:hover {
+    /* visibility: hidden; */
+    position:relative;
+    top:150px;
+}
+
+#radio:hover {
+    /* visibility: hidden; */
+    position: relative;
+    top: 150px;
+}
+
+#input-field {
+    background: transparent
+}
+
 
