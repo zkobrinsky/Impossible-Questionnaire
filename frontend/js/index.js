@@ -1,11 +1,14 @@
 init();
 
-function init() {
-    const api = new ApiService (`http://localhost:3000`);
-    api.getAllQuestionnaires();
-    
+async function init() {
+    const api = await new ApiService (`http://localhost:3000`);
+    api.getAllQuestionnaires()
+    .then(() => {
+        Questionnaire.all[2].displayQuestionnaire()
+    })
+    console.log(questionnaires[2])
+    // questionnaires[2].displayQuestionnaire()
     // debugger;
-    // Questionnaire.displayQuestionnaires();
 }
 
 
@@ -13,15 +16,7 @@ function init() {
 
 
 
-// experimenting with moving radios:
-// const wrongAnswers = document.querySelectorAll("#radio");
-// const rightAnswers = document.querySelector("#correct_answer");
 
-// wrongAnswers.forEach(answer => {
-//     answer.addEventListener('mouseenter', event => {
-//         // debugger;
-//     })
-// })
 
 
 
