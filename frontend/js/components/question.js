@@ -54,8 +54,6 @@ class Question {
                 }
             }
             return fields;
-
-
         }
         
 
