@@ -13,7 +13,7 @@ Questionnaire.destroy_all
 
 
 5.times do 
-    questionnaire = Questionnaire.create(title: Faker::Company.bs.titleize, result: Faker::ChuckNorris.fact)
+    questionnaire = Questionnaire.create(title: Faker::Company.bs.titleize, result: Faker::ChuckNorris.fact, description: Faker::ChuckNorris.fact)
 
     5.times do
         questionData = {
