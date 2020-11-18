@@ -15,14 +15,8 @@
     border: solid 1px;
 } */
 
-#radio1:hover {
-    /* visibility: hidden; */
-    position:relative;
-    top:150px;
-}
-
-#radio:hover {
-    /* visibility: hidden; */
+.input-group[answertype=wrong]:hover {
+    visibility: hidden;
     position: relative;
     top: 150px;
 }
@@ -30,5 +24,17 @@
 #input-field {
     background: transparent
 }
+
+.form-control {
+    word-wrap: break-word;
+}
+/* 
+.input-group[answertype=wrong] {
+    display:none;
+}
+
+.input-group[answertype=correct] {
+    display:none;
+} */
 
 
