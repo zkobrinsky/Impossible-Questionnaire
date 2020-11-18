@@ -1,12 +1,43 @@
-// function hello() {
-//     console.log('hello')
-// }
+const questionnaires = [];
 
-// window.addEventListener('DOMContentLoaded', () => hello());
+class Questionnaire {
+    static displayQuestionnaires() {
+        // debugger;
+    }
 
-function displayQuestionnaire() {
+    static all() {
+        return questionnaires;
+    }
 
+    constructor(obj) {
+        this.id = obj.id;
+        this.title = obj.title;
+        this.result = obj.result;
+        this.featured = obj.featured;
+        this.questions = obj.questions;
+    }
+
+    displayQuestionnaire() {
+        const container = document.querySelector("body > div");
+            
+        container.innerHTML = (
+            `<h1 id="change-this">${this.title}</h1></br>
+            ${this.displayQuestions()}`
+        )
+        // add a submit button to innerHTML as well
+    }
+
+    displayQuestions() {
+        return this.questions.map(question => {
+            const newQ = new Question(question)
+            return newQ.displayQuestion()+("</br></br>");
+            // debugger
+        }).join("")
+        
+    }
 }
+    
 
-// okay to stick with questionnaire
+
+
 
