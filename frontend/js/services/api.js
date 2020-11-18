@@ -6,14 +6,12 @@ class ApiService {
 
 
     getAllQuestionnaires() {
-        fetch(`${this.baseUrl}/questionnaires`)
+        return fetch(`${this.baseUrl}/questionnaires`)
         .then(resp => resp.json())
         .then(q => {
             q.forEach(questionnaire => {
-                let newQ = new Questionnaire(questionnaire)
-                questionnaires.push(newQ)
+                new Questionnaire(questionnaire)
             })
-            
         })
     }
 

@@ -1,13 +1,9 @@
-const questionnaires = [];
-
 class Questionnaire {
     static displayQuestionnaires() {
         // debugger;
     }
 
-    static all() {
-        return questionnaires;
-    }
+    static all = [];
 
     constructor(obj) {
         this.id = obj.id;
@@ -15,6 +11,7 @@ class Questionnaire {
         this.result = obj.result;
         this.featured = obj.featured;
         this.questions = obj.questions;
+        Questionnaire.all.push(this)
     }
 
     displayQuestionnaire() {
