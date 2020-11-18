@@ -1,4 +1,4 @@
-class ApiService{
+class ApiService {
 
     constructor(baseUrl) {
       this.baseUrl = baseUrl;
@@ -8,8 +8,12 @@ class ApiService{
     getAllQuestionnaires() {
         fetch(`${this.baseUrl}/questionnaires`)
         .then(resp => resp.json())
-        .then(obj => {
-            // debugger
+        .then(q => {
+            q.forEach(questionnaire => {
+                let newQ = new Questionnaire(questionnaire)
+                questionnaires.push(newQ)
+            })
+            
         })
     }
 
