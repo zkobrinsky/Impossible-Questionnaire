@@ -1,6 +1,6 @@
 class QuestionnairesController < ApplicationController
     def index
-        questionnaires = Questionnaire.all
+        questionnaires = Questionnaire.order(updated_at: :desc)
         render :json => questionnaires, :include => {:questions => {:except => [:created_at, :updated_at]}}
     end
 
