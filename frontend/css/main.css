@@ -9,7 +9,7 @@
     visibility: hidden;
     position: relative;
     top: 150px;
-    /* left: 150px; */
+    left: 150px;
 }
 
 .input-group[answertype=correct] {
@@ -34,25 +34,7 @@
     cursor: pointer;
 }
 
-.col-4 {
-    /* margin: 0 auto; */
-}
-
 .subhead{
     opacity: 60%;
     font-weight: normal;
 }
-/* 
-.input-group-text {
-    word-wrap: break-word;
-} */
-/* 
-.input-group[answertype=wrong] {
-    display:none;
-}
-
-.input-group[answertype=correct] {
-    display:none;
-} */
-
-
