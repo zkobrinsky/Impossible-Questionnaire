@@ -9,6 +9,7 @@ async function init() {
 
     mountIndexButton();
     mountHomeButton();
+    mountCreateButton();
 }
 
 function findAndDisplayFeatured() {
@@ -31,9 +32,15 @@ function mountHomeButton() {
     homeButton.addEventListener('click', (e) => {
         clearPage();
         findAndDisplayFeatured()
-        // debugger
     })
+}
 
+function mountCreateButton() {
+    const createButton = document.querySelector("#create-button");
+    createButton.addEventListener('click', (e) => {
+        clearPage();
+        debugger;
+    })
 }
 
 function clearPage() {
