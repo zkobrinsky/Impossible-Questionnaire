@@ -4,17 +4,17 @@ async function init() {
     const api = await new ApiService (`http://localhost:3000`);
     api.getAllQuestionnaires()
     .then(() => {
-        findAndDisplayFeatured()
+        displayFeatured()
     })
 
     mountIndexButton();
     mountHomeButton();
     mountCreateButton();
+    mountFeaturedDropdown();
 }
 
-function findAndDisplayFeatured() {
-    // find all featured
-    const featuredQuestionnaires = Questionnaire.all.filter(questionnaire => (questionnaire.featured === true))  
+function displayFeatured() {
+    const featuredQuestionnaires = findFeatured();
     // display random from featured  
     featuredQuestionnaires[Math.floor(Math.random() * featuredQuestionnaires.length)].displayQuestionnaire()
 }
@@ -31,7 +31,7 @@ function mountHomeButton() {
     const homeButton = document.querySelector("#home-button");
     homeButton.addEventListener('click', () => {
         clearPage();
-        findAndDisplayFeatured()
+        displayFeatured()
     })
 }
 
@@ -43,12 +43,27 @@ function mountCreateButton() {
     })
 }
 
+function mountFeaturedDropdown() {
+    const dropDown = document.querySelector(".dropdown-toggle");
+    dropDown.addEventListener('click', (e) => {
+        const realDropDown = document.querySelector(".dropdown-menu")
+        // debugger;
+        realDropDown.innerHTML = `<a class="dropdown-item" href="#">Action</a>
+        <a class="dropdown-item" href="#">Another action</a>`
+    })
+    
+}
+
 function displayNewQuestionnaireForm() {
     Questionnaire.mountCreateForm()
 }
 
 function clearPage() {
     document.querySelector("body > div").innerHTML = "";
+}
+
+function findFeatured() {
+    return Questionnaire.all.filter(questionnaire => (questionnaire.featured === true))
 }
 
 
