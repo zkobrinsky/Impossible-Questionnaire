@@ -32,6 +32,31 @@ class Questionnaire {
         }
     }
 
+    static mountCreateForm() {
+        const container = document.querySelector("body > div");
+        container.innerHTML = (`
+        <h1 class ="title">Create a New Questionnaire</h1>
+        <h3 class="description">Unlike most questionnaires, here there <strong>are</strong> incorrect answers. Make sure your friends know what's what.</h3>
+        <form>
+        <div class="form-group">
+            <label for="inputTitle">Title</label>
+            <input type="text" class="form-control" id="inputTitle" placeholder="Enter title">
+            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+        </div>
+        </form>
+        
+        `)
+        // debugger
+        // title form
+        // description form
+        // Create 5 Question Forms from Question Class
+        // Submit Button
+    }
+
     displayQuestionnaireCard() {
         return (`
         <div class="card" style="width: 18rem;" id="q-${this.id}">
@@ -64,7 +89,6 @@ class Questionnaire {
         return this.questions.map(question => {
             const newQ = new Question(question)
             return newQ.displayQuestion()+("</br></br>");
-            // debugger
         }).join("")
         
     }
