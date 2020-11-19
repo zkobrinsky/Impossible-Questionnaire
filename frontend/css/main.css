@@ -9,6 +9,7 @@
 
 .container {
     padding: 0 40px;
+    padding-bottom: 40px;
 }
 /* 
 #radio1 {
@@ -19,6 +20,11 @@
     visibility: hidden;
     position: relative;
     top: 150px;
+    /* left: 150px; */
+}
+
+.input-group[answertype=correct] {
+    cursor: pointer;
 }
 
 #input-field {
@@ -33,6 +39,14 @@
     opacity: 60%;
     font-style: italic;
 }
+
+.card {
+    cursor: pointer;
+}
+/* 
+.input-group-text {
+    word-wrap: break-word;
+} */
 /* 
 .input-group[answertype=wrong] {
     display:none;
