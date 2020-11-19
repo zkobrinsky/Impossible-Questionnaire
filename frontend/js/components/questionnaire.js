@@ -51,20 +51,20 @@ class Questionnaire {
             <label for="q-content-1"><h4>Question 1</h4></label><br>
             <input type="text" class="form-control form-control-lg" id="q-content-1" placeholder="Enter Your Question">
         </div>
-        <div class="form-group">
+        <div class="form-group correct-answer border border-success">
+            <input type="text" class="form-control form-control" id="q-content-1-correct-answer" placeholder="Enter the correct answer here">
+        </div>
+        <div class="form-group border border-danger">
             <input type="text" class="form-control form-control" id="q-content-1-answer-1" placeholder="Enter an incorrect response here">
         </div>
-        <div class="form-group">
+        <div class="form-group border border-danger">
             <input type="text" class="form-control form-control" id="q-content-1-answer-2" placeholder="Enter an incorrect response here">
         </div>
-        <div class="form-group">
+        <div class="form-group border border-danger">
             <input type="text" class="form-control form-control" id="q-content-1-answer-3" placeholder="Enter an incorrect response here">
         </div>
-        <div class="form-group">
+        <div class="form-group border border-danger">
             <input type="text" class="form-control form-control" id="q-content-1-answer-4" placeholder="Enter an incorrect response here">
-        </div>
-        <div class="form-group correct-answer">
-            <input type="text" class="form-control form-control" id="q-content-1-correct-answer" placeholder="Enter the correct answer here">
         </div>
         </form>
         
@@ -78,7 +78,7 @@ class Questionnaire {
 
     displayQuestionnaireCard() {
         return (`
-        <div class="card col-4" style="width: 18rem;" id="q-${this.id}">
+        <div class="card col-3" style="width: 18rem;" id="q-${this.id}">
           <div class="card-body">
             <h5 class="card-title">${this.title}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${this.description}</h6>
