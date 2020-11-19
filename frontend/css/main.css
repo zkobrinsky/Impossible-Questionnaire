@@ -1,20 +1,9 @@
-#change-this {
-    color: black;
-}
 
-#change-this:hover {
-    opacity: 50%;
-    /* margin-top: 30px; */
-}
 
 .container {
-    padding: 0 40px;
+    padding: 0 20px;
     padding-bottom: 40px;
 }
-/* 
-#radio1 {
-    border: solid 1px;
-} */
 
 .input-group[answertype=wrong]:hover {
     visibility: hidden;
@@ -41,7 +30,17 @@
 }
 
 .card {
+    margin: 10px;
     cursor: pointer;
+}
+
+.col-4 {
+    /* margin: 0 auto; */
+}
+
+.subhead{
+    opacity: 60%;
+    font-weight: normal;
 }
 /* 
 .input-group-text {
