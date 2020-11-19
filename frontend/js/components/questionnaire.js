@@ -99,7 +99,13 @@ class Questionnaire {
         )
         const button = document.querySelector("#submit-button")
         button.addEventListener('click', (e) => {
-            debugger
+            // add some conditional here for whether or not the form is filled out
+            container.innerHTML = 
+                `<div class="alert alert-success" role="alert">
+                    <h2 class="alert-heading">${this.result}</h2>
+                        <hr>
+                    <p class="mb-0">Thank you for your input. Your opinion matters to us and has been documented.</p>
+                </div>`;
         })
     }
 

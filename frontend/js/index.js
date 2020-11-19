@@ -45,11 +45,20 @@ function mountCreateButton() {
 
 function mountFeaturedDropdown() {
     const dropDown = document.querySelector(".dropdown-toggle");
+    const featured = [];
+    
     dropDown.addEventListener('click', (e) => {
-        const realDropDown = document.querySelector(".dropdown-menu")
-        // debugger;
-        realDropDown.innerHTML = `<a class="dropdown-item" href="#">Action</a>
-        <a class="dropdown-item" href="#">Another action</a>`
+        const realDropDown = document.querySelector(".dropdown-menu");
+        // still working on duplicates bug
+        realDropDown.innerHTML = "";
+        // document.querySelectorAll(".dropdown-item").forEach(e => {
+        //     // debugger;
+        //     e.parentNode.firstElementChild.remove();;
+        // })
+        findFeatured().forEach(q => {
+            featured.push(`<a class="dropdown-item" href="#">${q.title}</a>`)
+        })
+        realDropDown.innerHTML = featured.join("")
     })
     
 }
