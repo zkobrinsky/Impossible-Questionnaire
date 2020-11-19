@@ -21,7 +21,7 @@ function findAndDisplayFeatured() {
 
 function mountIndexButton() {
     const indexButton = document.querySelector("#index-button");
-    indexButton.addEventListener('click', (e) => {
+    indexButton.addEventListener('click', () => {
         clearPage();
         Questionnaire.displayQuestionnairesIndex()
     })
@@ -29,7 +29,7 @@ function mountIndexButton() {
 
 function mountHomeButton() {
     const homeButton = document.querySelector("#home-button");
-    homeButton.addEventListener('click', (e) => {
+    homeButton.addEventListener('click', () => {
         clearPage();
         findAndDisplayFeatured()
     })
@@ -37,10 +37,14 @@ function mountHomeButton() {
 
 function mountCreateButton() {
     const createButton = document.querySelector("#create-button");
-    createButton.addEventListener('click', (e) => {
+    createButton.addEventListener('click', () => {
         clearPage();
-        debugger;
+        displayNewQuestionnaireForm()
     })
+}
+
+function displayNewQuestionnaireForm() {
+    Questionnaire.mountCreateForm()
 }
 
 function clearPage() {
