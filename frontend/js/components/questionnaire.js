@@ -15,9 +15,9 @@ class Questionnaire {
     static displayQuestionnairesIndex() {
         const container = document.querySelector("body > div");
             
-        container.innerHTML = this.all.map(q => {
+        container.innerHTML = `<div class="row">${this.all.map(q => {
             return q.displayQuestionnaireCard()
-        }).join("")
+        }).join("")}</div>`
         this.mountCardButtons()
     }
 
@@ -36,16 +36,35 @@ class Questionnaire {
         const container = document.querySelector("body > div");
         container.innerHTML = (`
         <h1 class ="title">Create a New Questionnaire</h1>
-        <h3 class="description">Unlike most questionnaires, here there <strong>are</strong> incorrect answers. Make sure your friends know what's what.</h3>
+        <br>
+        <h3 class="subhead">Unlike most questionnaires, here there <strong>are</strong> incorrect answers. Make sure your friends know what's what.</h3>
+        <br>
         <form>
         <div class="form-group">
-            <label for="inputTitle">Title</label>
-            <input type="text" class="form-control" id="inputTitle" placeholder="Enter title">
-            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            <input type="text" class="form-control form-control-lg" id="inputTitle" placeholder="Questionnaire Title">
         </div>
         <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            <input type="text" class="form-control form-control-lg" id="inputDescription" placeholder="Description">
+        </div>
+        <br>
+        <div class="form-group">
+            <label for="q-content-1"><h4>Question 1</h4></label><br>
+            <input type="text" class="form-control form-control-lg" id="q-content-1" placeholder="Enter Your Question">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-control" id="q-content-1-answer-1" placeholder="Enter an incorrect response here">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-control" id="q-content-1-answer-2" placeholder="Enter an incorrect response here">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-control" id="q-content-1-answer-3" placeholder="Enter an incorrect response here">
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control form-control" id="q-content-1-answer-4" placeholder="Enter an incorrect response here">
+        </div>
+        <div class="form-group correct-answer">
+            <input type="text" class="form-control form-control" id="q-content-1-correct-answer" placeholder="Enter the correct answer here">
         </div>
         </form>
         
@@ -59,7 +78,7 @@ class Questionnaire {
 
     displayQuestionnaireCard() {
         return (`
-        <div class="card" style="width: 18rem;" id="q-${this.id}">
+        <div class="card col-4" style="width: 18rem;" id="q-${this.id}">
           <div class="card-body">
             <h5 class="card-title">${this.title}</h5>
             <h6 class="card-subtitle mb-2 text-muted">${this.description}</h6>
