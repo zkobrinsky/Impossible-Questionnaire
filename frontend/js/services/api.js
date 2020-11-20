@@ -16,8 +16,22 @@ class ApiService {
     }
 
     submitNewQuestionnaire(obj) {
-        debugger;
+        const nestedObj = {questionnaire: obj}
+        fetch(`${this.baseUrl}/questionnaires`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'},
+            body: JSON.stringify(nestedObj)
+        })
+        .then(resp => resp.json())
+        .then(e => {
+            obj.id = e.id;
+        })
+
     }
 
 }
+
+    
 
