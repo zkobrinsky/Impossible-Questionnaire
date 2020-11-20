@@ -15,5 +15,9 @@ class ApiService {
         })
     }
 
+    submitNewQuestionnaire(obj) {
+        debugger;
+    }
+
 }
 
