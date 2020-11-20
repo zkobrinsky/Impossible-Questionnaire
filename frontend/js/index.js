@@ -45,20 +45,16 @@ function mountCreateButton() {
 
 function mountFeaturedDropdown() {
     const dropDown = document.querySelector(".dropdown-toggle");
-    const featured = [];
+    let featured = [];
+    const parentDropDown = document.querySelector("#navbarSupportedContent > ul > li.nav-item.dropdown");
     
-    dropDown.addEventListener('click', (e) => {
+    dropDown.addEventListener('click', () => {
         const realDropDown = document.querySelector(".dropdown-menu");
-        // still working on duplicates bug
-        realDropDown.innerHTML = "";
-        // document.querySelectorAll(".dropdown-item").forEach(e => {
-        //     // debugger;
-        //     e.parentNode.firstElementChild.remove();;
-        // })
         findFeatured().forEach(q => {
             featured.push(`<a class="dropdown-item" href="#">${q.title}</a>`)
         })
         realDropDown.innerHTML = featured.join("")
+    featured = [];
     })
     
 }
