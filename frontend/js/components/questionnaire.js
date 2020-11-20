@@ -34,6 +34,12 @@ class Questionnaire {
 
     static mountCreateForm() {
         const container = document.querySelector("body > div");
+        let newQuestions = [];
+
+        for (let i = 1; i <= 5; i++) {
+            newQuestions.push(this.displayQForms(i))
+        }
+    
         container.innerHTML = (`
         <h1 class ="title">Create a New Questionnaire</h1>
         <br>
@@ -46,34 +52,42 @@ class Questionnaire {
         <div class="form-group">
             <input type="text" class="form-control form-control-lg" id="inputDescription" placeholder="Description">
         </div>
-        <br>
         <div class="form-group">
-            <label for="q-content-1"><h4>Question 1</h4></label><br>
-            <input type="text" class="form-control form-control-lg" id="q-content-1" placeholder="Enter Your Question">
+            <input type="text" class="form-control form-control-lg" id="inputResult" placeholder="Result">
+            <medium id="inputResultHelp" class="form-text text-muted">What snarky message would you like to display at the end of the questionnaire?</small>
+        </div>
+        <br>
+        ${newQuestions.join("")}
+        <button type="button" class="btn btn-outline-primary" id="submit-button">Submit</button>
+        </form>
+        `)
+
+        // Submit Button
+    }
+
+    static displayQForms(index) {
+        return (`
+        <div class="form-group">
+            <label for="q-content-${index}"><h4>Question ${index}</h4></label><br>
+            <input type="text" class="form-control form-control-lg" id="q-content-${index}" placeholder="Enter Your Question">
         </div>
         <div class="form-group correct-answer border border-success">
-            <input type="text" class="form-control form-control" id="q-content-1-correct-answer" placeholder="Enter the correct answer here">
+            <input type="text" class="form-control form-control" id="q-content-${index}-correct-answer" placeholder="Enter the correct answer here">
         </div>
         <div class="form-group border border-danger">
-            <input type="text" class="form-control form-control" id="q-content-1-answer-1" placeholder="Enter an incorrect response here">
+            <input type="text" class="form-control form-control" id="q-content-${index}-answer-1" placeholder="Enter an incorrect response here">
         </div>
         <div class="form-group border border-danger">
-            <input type="text" class="form-control form-control" id="q-content-1-answer-2" placeholder="Enter an incorrect response here">
+            <input type="text" class="form-control form-control" id="q-content-${index}-answer-2" placeholder="Enter an incorrect response here">
         </div>
         <div class="form-group border border-danger">
-            <input type="text" class="form-control form-control" id="q-content-1-answer-3" placeholder="Enter an incorrect response here">
+            <input type="text" class="form-control form-control" id="q-content-${index}-answer-3" placeholder="Enter an incorrect response here">
         </div>
         <div class="form-group border border-danger">
-            <input type="text" class="form-control form-control" id="q-content-1-answer-4" placeholder="Enter an incorrect response here">
+            <input type="text" class="form-control form-control" id="q-content-${index}-answer-4" placeholder="Enter an incorrect response here">
         </div>
-        </form>
-        
+        <br>
         `)
-        // debugger
-        // title form
-        // description form
-        // Create 5 Question Forms from Question Class
-        // Submit Button
     }
 
     displayQuestionnaireCard() {
@@ -94,8 +108,7 @@ class Questionnaire {
         container.innerHTML = (
             `<h1 class="title" id="q-${this.id}-title">${this.title}</h1>
             <h3 class="description" id="q-${this.id}-description">${this.description}</h3></br>
-            ${this.displayQuestions()}
-            <button type="button" class="btn btn-outline-primary" id="submit-button">Submit</button>`
+            ${this.displayQuestions()}`
         )
         const button = document.querySelector("#submit-button")
         button.addEventListener('click', (e) => {
@@ -113,8 +126,8 @@ class Questionnaire {
         // talks to Question class
         return this.questions.map(question => {
             const newQ = new Question(question)
-            return newQ.displayQuestion()+("</br></br>");
-        }).join("")
+            return newQ.displayQuestion()+(`</br></br>`);
+        }).join("")+(`<button type="button" class="btn btn-outline-primary" id="submit-button">Submit</button>`)
         
     }
 }
