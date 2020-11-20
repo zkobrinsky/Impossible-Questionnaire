@@ -61,8 +61,7 @@ class Questionnaire {
         <button type="button" class="btn btn-outline-primary" id="submit-button">Submit</button>
         </form>
         `)
-
-        // Submit Button
+        this.mountNewSubmitButton()
     }
 
     static displayQForms(index) {
@@ -88,6 +87,27 @@ class Questionnaire {
         </div>
         <br>
         `)
+    }
+
+    static mountNewSubmitButton() {
+        const button = document.querySelector("#submit-button");
+        const api = new ApiService(`http://localhost:3000`)
+
+        button.addEventListener('click', (e) => {
+            let forms = Array.prototype.slice.call(e.target.parentElement.childNodes);
+            forms = forms.filter(e => {
+                // debugger;
+                if (e.classList) {
+                    return e.classList.contains("form-group")
+                }
+                // 
+            }).slice(3)
+            debugger;
+            // debugger;
+            // map with e.firstElementChild.value;
+            // forms.slice(2);
+            // debugger
+        })
     }
 
     displayQuestionnaireCard() {
