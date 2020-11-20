@@ -101,10 +101,9 @@ class Questionnaire {
                 if (e.classList) {
                     return e.classList.contains("form-group")
                 }
-                // 
             })
-            formQuestions = forms.slice(3)
 
+            formQuestions = forms.slice(3)
             formQuestionnaire = forms.slice(0,3)
 
             const newQ = new Questionnaire({});
@@ -114,6 +113,7 @@ class Questionnaire {
 
             const newQuestions = [(new Question({})), (new Question({})), (new Question({})), (new Question({})), (new Question({}))]
 
+            // converting form fields into objects with correct keys
             let formObjects = formQuestions.map((form) => {
                 if (form.firstElementChild.classList.contains("form-control") == false) {
                     let key = "content";
@@ -127,12 +127,15 @@ class Questionnaire {
                     return obj;
                 }
             })
-            debugger;
             
-            // newQuestions.forEach((question, index) => {
-            //     debugger;
-            // })
-            
+            for (let i = 0, n = 0; i < formObjects.length; i++) {
+                if (i % 6 == 0) {
+                    let answers = Object.assign({}, formObjects[i+1], formObjects[i+2], formObjects[i+3], formObjects[i+4], formObjects[i+5])
+                    Object.assign(newQuestions[n].answers, answers)
+                    Object.assign(newQuestions[n], formObjects[i])
+                }
+            }
+            newQ.questions = newQuestions;
         })
     }
 
