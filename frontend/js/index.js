@@ -54,7 +54,7 @@ function mountFeaturedDropdown() {
             featured.push(`<a class="dropdown-item" href="#">${q.title}</a>`)
         })
         realDropDown.innerHTML = featured.join("")
-    featured = [];
+        featured = [];
     })
     
 }
