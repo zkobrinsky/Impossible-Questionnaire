@@ -91,22 +91,48 @@ class Questionnaire {
 
     static mountNewSubmitButton() {
         const button = document.querySelector("#submit-button");
-        const api = new ApiService(`http://localhost:3000`)
+        const api = new ApiService(`http://localhost:3000`);
+        let formQuestions;
+        let formQuestionnaire;
 
         button.addEventListener('click', (e) => {
             let forms = Array.prototype.slice.call(e.target.parentElement.childNodes);
             forms = forms.filter(e => {
-                // debugger;
                 if (e.classList) {
                     return e.classList.contains("form-group")
                 }
                 // 
-            }).slice(3)
+            })
+            formQuestions = forms.slice(3)
+
+            formQuestionnaire = forms.slice(0,3)
+
+            const newQ = new Questionnaire({});
+                newQ.title = formQuestionnaire[0].firstElementChild.value;
+                newQ.description = formQuestionnaire[1].firstElementChild.value;
+                newQ.result = formQuestionnaire[2].firstElementChild.value;
+
+            const newQuestions = [(new Question({})), (new Question({})), (new Question({})), (new Question({})), (new Question({}))]
+
+            let formObjects = formQuestions.map((form) => {
+                if (form.firstElementChild.classList.contains("form-control") == false) {
+                    let key = "content";
+                    let obj = {}
+                    obj[key] = form.children[2].value;
+                    return obj;
+                } else {
+                    let key = form.firstElementChild.id.split("q-content-").pop().slice(2).replace("-", "_");
+                    let obj = {}
+                    obj[key] = form.firstElementChild.value;
+                    return obj;
+                }
+            })
             debugger;
-            // debugger;
-            // map with e.firstElementChild.value;
-            // forms.slice(2);
-            // debugger
+            
+            // newQuestions.forEach((question, index) => {
+            //     debugger;
+            // })
+            
         })
     }
 
