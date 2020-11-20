@@ -96,6 +96,7 @@ class Questionnaire {
         let formQuestionnaire;
 
         button.addEventListener('click', (e) => {
+            // add form validation here
             let forms = Array.prototype.slice.call(e.target.parentElement.childNodes);
             forms = forms.filter(e => {
                 if (e.classList) {
@@ -136,6 +137,9 @@ class Questionnaire {
                 }
             }
             newQ.questions = newQuestions;
+            // send post request, receive id, then:
+            api.submitNewQuestionnaire(newQ)
+            newQ.displayQuestionnaire()
         })
     }
 
