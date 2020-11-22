@@ -45,22 +45,30 @@ function mountCreateButton() {
 
 function mountFeaturedDropdown() {
     const dropDown = document.querySelector(".dropdown-toggle");
-    let featured = [];
-    const parentDropDown = document.querySelector("#navbarSupportedContent > ul > li.nav-item.dropdown");
+    let elements = document.getElementsByClassName('dropdown-item');
     
     dropDown.addEventListener('click', () => {
         const realDropDown = document.querySelector(".dropdown-menu");
+        realDropDown.innerHTML = ""
         findFeatured().forEach(q => {
-            featured.push(`<a class="dropdown-item" href="#">${q.title}</a>`)
+            realDropDown.innerHTML += `<a class="dropdown-item" href="#" id=${q.id}>${q.title}</a>`
         })
-        realDropDown.innerHTML = featured.join("")
-        featured = [];
+
+        // iterate after dropdown items have been created
+        for (let element of elements) {
+            element.addEventListener('click', () => {
+                let q = Questionnaire.all.find(q => {
+                    return q.id == element.id
+                })
+                q.displayQuestionnaire();
+            })
+        }
     })
     
 }
 
 function displayNewQuestionnaireForm() {
-    Questionnaire.mountCreateForm()
+    Questionnaire.mountCreateForm(5)
 }
 
 function clearPage() {
