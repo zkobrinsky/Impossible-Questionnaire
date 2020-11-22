@@ -32,11 +32,11 @@ class Questionnaire {
         }
     }
 
-    static mountCreateForm() {
+    static mountCreateForm(numQuestions) {
         const container = document.querySelector("body > div");
         let newQuestions = [];
 
-        for (let i = 1; i <= 5; i++) {
+        for (let i = 1; i <= numQuestions; i++) {
             newQuestions.push(this.displayQForms(i))
         }
     
