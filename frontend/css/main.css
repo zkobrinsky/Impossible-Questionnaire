@@ -24,10 +24,6 @@
     opacity: 60%;
 }
 
-/* .form-control {
-    word-wrap: break-word;
-} */
-
 .description {
     opacity: 60%;
     font-style: italic;
@@ -55,3 +51,11 @@
 .alert-success {
     margin-top: 20%;
 }
+
+.nav-item {
+    cursor: pointer;
+}
+
+/* .invalid-feedback {
+    display:block;
+} */
