@@ -21,6 +21,15 @@ class Questionnaire {
         this.mountCardButtons()
     }
 
+    static displayFilteredQuestionnairesIndex(array) {
+        const container = document.querySelector("body > div");
+            
+        container.innerHTML = `<div class="row">${array.map(q => {
+            return q.displayQuestionnaireCard()
+        }).join("")}</div>`
+        this.mountCardButtons()
+    }
+
     static mountCardButtons() {
         const cards = document.querySelectorAll(".card");
 
