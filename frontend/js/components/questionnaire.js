@@ -160,9 +160,9 @@ class Questionnaire {
             }
 
             // don't submit if there are blank fields
-            if (!validator()) {
-                return
-            }
+            // if (!validator()) {
+            //     return
+            // }
 
             formQuestions = forms.slice(3)
             formQuestionnaire = forms.slice(0,3)
@@ -194,6 +194,7 @@ class Questionnaire {
             for (let i = 0, n = 0; i < formObjects.length; i++) {
                 if (i % 6 == 0) {
                     let answers = Object.assign({}, formObjects[i+1], formObjects[i+2], formObjects[i+3], formObjects[i+4], formObjects[i+5])
+                    // debugger;
                     Object.assign(newQuestions[n].answers, answers)
                     Object.assign(newQuestions[n], formObjects[i])
                     n++;
@@ -201,7 +202,7 @@ class Questionnaire {
             }
             newQ.questions = newQuestions;
             api.submitNewQuestionnaire(newQ)
-            newQ.displayQuestionnaire()
+            // newQ.displayQuestionnaire()
         })
     }
 
@@ -239,6 +240,7 @@ class Questionnaire {
 
     displayQuestions() {
         // talks to Question class
+        // debugger;
         return this.questions.map(question => {
             const newQ = new Question(question)
             return newQ.displayQuestion()+(`</br></br>`);
