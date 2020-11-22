@@ -47,14 +47,23 @@ class Questionnaire {
         <br>
         <form>
         <div class="form-group">
-            <input type="text" class="form-control form-control-lg" id="inputTitle" placeholder="Questionnaire Title">
+            <input type="text" class="form-control form-control-lg" id="inputTitle" placeholder="Questionnaire Title" required>
+            <div class="invalid-feedback">
+                This field cannot be empty.
+            </div>
         </div>
         <div class="form-group">
             <input type="text" class="form-control form-control-lg" id="inputDescription" placeholder="Description">
+            <div class="invalid-feedback">
+                This field cannot be empty.
+            </div>
         </div>
         <div class="form-group">
             <input type="text" class="form-control form-control-lg" id="inputResult" placeholder="Result">
             <medium id="inputResultHelp" class="form-text text-muted">What snarky message would you like to display at the end of the questionnaire?</small>
+            <div class="invalid-feedback">
+                This field cannot be empty.
+            </div>
         </div>
         <br>
         ${newQuestions.join("")}
@@ -63,27 +72,46 @@ class Questionnaire {
         `)
         this.mountNewSubmitButton()
     }
+    
 
     static displayQForms(index) {
         return (`
         <div class="form-group">
             <label for="q-content-${index}"><h4>Question ${index}</h4></label><br>
             <input type="text" class="form-control form-control-lg" id="q-content-${index}" placeholder="Enter Your Question">
+            <div class="invalid-feedback">
+                This field cannot be empty.
+            </div>
         </div>
         <div class="form-group correct-answer border border-success">
             <input type="text" class="form-control form-control" id="q-content-${index}-correct-answer" placeholder="Enter the correct answer here">
+            <div class="invalid-feedback">
+                This field cannot be empty.
+            </div>
         </div>
         <div class="form-group border border-danger">
             <input type="text" class="form-control form-control" id="q-content-${index}-answer-1" placeholder="Enter an incorrect response here">
+            <div class="invalid-feedback">
+                This field cannot be empty.
+            </div>
         </div>
         <div class="form-group border border-danger">
             <input type="text" class="form-control form-control" id="q-content-${index}-answer-2" placeholder="Enter an incorrect response here">
+            <div class="invalid-feedback">
+                This field cannot be empty.
+            </div>
         </div>
         <div class="form-group border border-danger">
             <input type="text" class="form-control form-control" id="q-content-${index}-answer-3" placeholder="Enter an incorrect response here">
+            <div class="invalid-feedback">
+                This field cannot be empty.
+            </div>
         </div>
         <div class="form-group border border-danger">
             <input type="text" class="form-control form-control" id="q-content-${index}-answer-4" placeholder="Enter an incorrect response here">
+            <div class="invalid-feedback">
+                This field cannot be empty.
+            </div>
         </div>
         <br>
         `)
@@ -96,7 +124,7 @@ class Questionnaire {
         let formQuestionnaire;
 
         button.addEventListener('click', (e) => {
-            // add form validation here
+
             let forms = Array.prototype.slice.call(e.target.parentElement.childNodes);
             forms = forms.filter(e => {
                 if (e.classList) {
@@ -104,27 +132,52 @@ class Questionnaire {
                 }
             })
 
+            
+            function validator() {
+                let valid = true;
+                forms.forEach(f => {
+                if (f.querySelector(".form-control").value === "") {
+                    if (f.querySelector(".invalid-feedback")) {
+                        f.querySelector(".invalid-feedback").style.display = "block";
+                    }
+                        valid = false;
+                    } else {
+                        if (f.querySelector(".invalid-feedback")) {
+                            f.querySelector(".invalid-feedback").style.display = "none";
+                        }
+                    }
+                })
+                return valid;
+            }
+
+            // don't submit if there are blank fields
+            if (!validator()) {
+                return
+            }
+
             formQuestions = forms.slice(3)
             formQuestionnaire = forms.slice(0,3)
 
             const newQ = new Questionnaire({});
-                newQ.title = formQuestionnaire[0].firstElementChild.value;
-                newQ.description = formQuestionnaire[1].firstElementChild.value;
-                newQ.result = formQuestionnaire[2].firstElementChild.value;
+                newQ.title = formQuestionnaire[0].querySelector(".form-control").value;
+                newQ.description = formQuestionnaire[1].querySelector(".form-control").value;
+                newQ.result = formQuestionnaire[2].querySelector(".form-control").value;
 
             const newQuestions = [(new Question({})), (new Question({})), (new Question({})), (new Question({})), (new Question({}))]
 
             // converting form fields into objects with correct keys
             let formObjects = formQuestions.map((form) => {
+                let formValue = form.querySelector(".form-control").value;
+
                 if (form.firstElementChild.classList.contains("form-control") == false) {
                     let key = "content";
                     let obj = {}
-                    obj[key] = form.children[2].value;
+                    obj[key] = formValue;
                     return obj;
                 } else {
-                    let key = form.firstElementChild.id.split("q-content-").pop().slice(2).replace("-", "_");
+                    let key = form.querySelector(".form-control").id.split("q-content-").pop().slice(2).replace("-", "_");
                     let obj = {}
-                    obj[key] = form.firstElementChild.value;
+                    obj[key] = formValue;
                     return obj;
                 }
             })
@@ -134,10 +187,10 @@ class Questionnaire {
                     let answers = Object.assign({}, formObjects[i+1], formObjects[i+2], formObjects[i+3], formObjects[i+4], formObjects[i+5])
                     Object.assign(newQuestions[n].answers, answers)
                     Object.assign(newQuestions[n], formObjects[i])
+                    n++;
                 }
             }
             newQ.questions = newQuestions;
-            // send post request, receive id, then:
             api.submitNewQuestionnaire(newQ)
             newQ.displayQuestionnaire()
         })
