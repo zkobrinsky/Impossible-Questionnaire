@@ -8,15 +8,22 @@ class ApiService {
     getAllQuestionnaires() {
         return fetch(`${this.baseUrl}/questionnaires`)
         .then(resp => resp.json())
-        .then(q => {
-            // debugger;
-            q.forEach(questionnaire => {
-                
-                debugger;
-            //     // fix on the back end
-            //     new Questionnaire(questionnaire)
+        .then(questionnaire => {
+            questionnaire.forEach(e => {
+            const newQs = e.questions.map(q => {
+                return new Question(q);
+            })
+            const bigQ = new Questionnaire({
+                id: e.id,
+                title: e.title,
+                result: e.result,
+                featured: e.featured,
+                questions: newQs,
+                description: e.description,
+                content: e.content,
             })
         })
+    })
     }
 
     submitNewQuestionnaire(obj) {
@@ -30,11 +37,20 @@ class ApiService {
         })
         .then(resp => resp.json())
         .then(e => {
-            obj.id = e.id;
-            obj.questions.forEach((o, index) => {
-                o.id = e.questions[index].id
+            const newQs = e.questions.map(q => {
+                return new Question(q);
             })
-            obj.displayQuestionnaire()
+            const bigQ = new Questionnaire({
+                id: e.id,
+                title: e.title,
+                result: e.result,
+                featured: e.featured,
+                questions: newQs,
+                description: e.description,
+                content: e.content,
+            })
+
+            bigQ.displayQuestionnaire()
         })
 
     }
