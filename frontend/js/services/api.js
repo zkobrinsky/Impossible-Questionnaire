@@ -9,8 +9,12 @@ class ApiService {
         return fetch(`${this.baseUrl}/questionnaires`)
         .then(resp => resp.json())
         .then(q => {
+            // debugger;
             q.forEach(questionnaire => {
-                new Questionnaire(questionnaire)
+                
+                debugger;
+            //     // fix on the back end
+            //     new Questionnaire(questionnaire)
             })
         })
     }
@@ -27,6 +31,10 @@ class ApiService {
         .then(resp => resp.json())
         .then(e => {
             obj.id = e.id;
+            obj.questions.forEach((o, index) => {
+                o.id = e.questions[index].id
+            })
+            obj.displayQuestionnaire()
         })
 
     }
