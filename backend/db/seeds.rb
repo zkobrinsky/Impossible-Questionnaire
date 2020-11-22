@@ -32,6 +32,7 @@ Questionnaire.destroy_all
 end
 # needs at least one featured to display main page
 Questionnaire.last.update(featured: true)
+Questionnaire.first.update(featured: true)
 
 
 
