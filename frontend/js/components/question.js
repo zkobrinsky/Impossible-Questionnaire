@@ -56,9 +56,6 @@ class Question {
             return fields;
         }
 
-        static newQuestion() {
-
-        }
         
 
 }
