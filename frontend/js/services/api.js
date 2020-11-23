@@ -40,7 +40,8 @@ class ApiService {
             const newQs = e.questions.map(q => {
                 return new Question(q);
             })
-            const bigQ = new Questionnaire({
+            
+            Object.assign(obj, {
                 id: e.id,
                 title: e.title,
                 result: e.result,
@@ -50,7 +51,7 @@ class ApiService {
                 content: e.content,
             })
 
-            bigQ.displayQuestionnaire()
+            obj.displayQuestionnaire()
         })
 
     }
