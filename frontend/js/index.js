@@ -1,10 +1,12 @@
 init();
 
+
 async function init() {
     const api = await new ApiService (`http://localhost:3000`);
     api.getAllQuestionnaires()
     .then(() => {
         displayFeatured()
+        animateWrongAnswers();
     })
 
     mountIndexButton();
@@ -12,6 +14,7 @@ async function init() {
     mountCreateButton();
     mountFeaturedDropdown();
     mountSearchBar();
+    
 }
 
 function displayFeatured() {
@@ -121,6 +124,23 @@ function findFeatured() {
     return Questionnaire.all.filter(questionnaire => (questionnaire.featured === true))
 }
 
+function animateWrongAnswers() {
+    const wrongAnswers = document.querySelectorAll(".input-group[answertype=wrong]")
+
+    wrongAnswers.forEach(answer => {
+        answer.querySelector(".input-group-text").addEventListener('click', e => {
+            e.target.checked = false;
+        })
+        
+        answer.addEventListener('mouseover', e => {
+            let plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+            let randomCoord = Math.random() * 200 * plusOrMinus;
+
+            e.target.parentElement.style.left = `${randomCoord}px`;
+            e.target.parentElement.style.top = `${randomCoord}px`;
+        })
+    })
+}
 
 
 
