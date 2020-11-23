@@ -231,7 +231,7 @@ class Questionnaire {
                 `<div class="alert alert-success" role="alert">
                     <h2 class="alert-heading">${this.result}</h2>
                         <hr>
-                    <p class="mb-0">Thank you for your input. Your opinion matters to us and has been documented.</p>
+                    <p class="mb-0">Thank you for your input. Your opinion matters to us.</p>
                 </div>`;
         })
         animateWrongAnswers();
