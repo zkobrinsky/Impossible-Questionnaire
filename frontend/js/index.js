@@ -138,8 +138,6 @@ function animateWrongAnswers() {
             e.target.parentElement.style.left = `${randomCoord}px`;
             e.target.parentElement.style.top = `${randomCoord}px`;
 
-            
-    
             setInterval(function() {
                 resetCoords(e);
             }, 2000);
@@ -148,13 +146,8 @@ function animateWrongAnswers() {
                 e.target.parentElement.style.left = "0px";
                 e.target.parentElement.style.top = "0px";
             }
-
-            
         })
-        })
-
-        
-
+    })
         
 }
 
