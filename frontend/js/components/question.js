@@ -21,7 +21,7 @@ class Question {
                 answers[j] = temp
               }
 
-            return `<h5>${this.content}</h3>${answers.join("")}`
+            return `<h5 class="question">${this.content}</h5>${answers.join("")}`
         }
 
         htmlifyAnswers() {
