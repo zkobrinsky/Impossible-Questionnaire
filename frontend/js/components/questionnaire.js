@@ -201,7 +201,6 @@ class Questionnaire {
             }
             newQ.questions = newQuestions;
             api.submitNewQuestionnaire(newQ)
-            // newQ.displayQuestionnaire()
         })
     }
 
