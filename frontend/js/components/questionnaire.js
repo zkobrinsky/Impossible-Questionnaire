@@ -234,6 +234,7 @@ class Questionnaire {
                     <p class="mb-0">Thank you for your input. Your opinion matters to us and has been documented.</p>
                 </div>`;
         })
+        animateWrongAnswers();
     }
 
     displayQuestions() {
