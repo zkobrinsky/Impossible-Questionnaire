@@ -5,15 +5,40 @@
     padding-bottom: 40px;
 }
 
-.input-group[answertype=wrong]:hover {
-    visibility: hidden;
-    position: relative;
+/* .input-group[answertype=wrong]:hover { */
+    /* visibility: hidden; */
+    /* position: relative;
     top: 150px;
     left: 150px;
+    z-index: 1;
+    background: white; */
+
+/* } */
+.input-group {
+    background: white;
 }
+
 
 .input-group[answertype=correct] {
     cursor: pointer;
+    z-index: 1;
+    /* background: white; */
+}
+
+.title {
+    z-index: 1;
+    background: white;
+}
+
+.description {
+    z-index: 1;
+    background: white;
+}
+
+.question {
+    position: relative;
+    z-index: 1;
+    background: white;
 }
 
 #input-field {
