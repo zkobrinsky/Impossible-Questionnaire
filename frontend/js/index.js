@@ -13,7 +13,6 @@ async function init() {
     mountCreateButton();
     mountFeaturedDropdown();
     mountSearchBar();
-    
 }
 
 function displayFeatured() {
@@ -75,39 +74,7 @@ function mountSearchBar() {
 
     button.addEventListener('click', (e) => {
         let value = e.target.parentElement.querySelector(".form-control").value;
-        let results = []
-
-        Questionnaire.all.forEach(q => {
-            let options = [q.title, q.result, q.description]
-            options.forEach((o, index) => {
-                let innerResults = o.split(" ").map(w => {
-                    if (w.toLowerCase() == value.toLowerCase()) {
-                        if (index === 0) {
-                        return Questionnaire.all.find(q => {
-                            return q.title === options[index]
-                        })
-                    } else if (index === 1) {
-                        return Questionnaire.all.find(q => {
-                            return q.title === options[index]
-                        })
-                    } else if (index === 2) {
-                        return Questionnaire.all.find(q => {
-                            return q.description === options[index]
-                        })
-                    }
-
-                    }
-                    
-                }).filter(Boolean);
-
-                if (innerResults) {
-                    innerResults.forEach(r => {
-                        results.push(r)
-                    })
-                }
-            })
-        })
-        Questionnaire.displayFilteredQuestionnairesIndex(results);
+            Questionnaire.searchQuestionnaires(value);
     })
 }
 

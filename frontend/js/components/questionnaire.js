@@ -204,6 +204,44 @@ class Questionnaire {
         })
     }
 
+    static searchQuestionnaires(value) {
+
+        let results = []
+
+        Questionnaire.all.forEach(q => {
+            let options = [q.title, q.result, q.description]
+            options.forEach((o, index) => {
+                let innerResults = o.split(" ").map(w => {
+                    if (w.toLowerCase() == value.toLowerCase()) {
+                        if (index === 0) {
+                        return Questionnaire.all.find(q => {
+                            return q.title === options[index]
+                        })
+                    } else if (index === 1) {
+                        return Questionnaire.all.find(q => {
+                            return q.title === options[index]
+                        })
+                    } else if (index === 2) {
+                        return Questionnaire.all.find(q => {
+                            return q.description === options[index]
+                        })
+                    }
+
+                    }
+                    
+                }).filter(Boolean);
+
+                if (innerResults) {
+                    innerResults.forEach(r => {
+                        results.push(r)
+                    })
+                }
+            })
+        })
+        Questionnaire.displayFilteredQuestionnairesIndex(results);
+
+    }
+
     displayQuestionnaireCard() {
         return (`
         <div class="card col-3" style="width: 18rem;" id="q-${this.id}">
@@ -244,6 +282,8 @@ class Questionnaire {
         }).join("")+(`<button type="button" class="btn btn-outline-primary" id="submit-button">Submit</button>`)
         
     }
+
+
 }
     
 
