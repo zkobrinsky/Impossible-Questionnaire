@@ -99,19 +99,26 @@ function animateWrongAnswers() {
         })
         
         answer.addEventListener('mouseover', e => {
-            let plusOrMinus = Math.random() < 0.5 ? -1 : 1;
-            let randomCoord = Math.random() * 200 * plusOrMinus;
 
-            e.target.parentElement.style.left = `${randomCoord}px`;
-            e.target.parentElement.style.top = `${randomCoord}px`;
+            let targetDiv = e.target.closest(".input-group") ? e.target.closest(".input-group") : e.target.parentElement.closest(".input-group")
+            // let plusOrMinus = Math.random() < 0.5 ? -1 : 1;
+            // let randomCoord = Math.random() * 200 * plusOrMinus;
+            // debugger;
+            const correctItem = document.querySelector("#"+e.target.parentElement.id.split("-").slice(0,2).join("-")+"-correct_answer");    
+            const correctCoords = correctItem.getBoundingClientRect();
+            const targetCoords = targetDiv.getBoundingClientRect();
+
+            // targetDiv.style.left = `${randomCoord}px`;
+            // targetDiv.style.top = "40px";
+            targetDiv.style.top = `${(targetCoords.y - correctCoords.y)*1.1}px`;
 
             setInterval(function() {
                 resetCoords(e);
-            }, 2000);
+            }, 5000);
 
             function resetCoords(e) {
-                e.target.parentElement.style.left = "0px";
-                e.target.parentElement.style.top = "0px";
+                targetDiv.style.left = "0px";
+                targetDiv.style.top = "0px";
             }
         })
     })
