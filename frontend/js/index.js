@@ -1,8 +1,8 @@
 init();
 
 
-async function init() {
-    const api = await new ApiService (`http://localhost:3000`);
+function init() {
+    const api = new ApiService(`http://localhost:3000`);
     api.getAllQuestionnaires()
     .then(() => {
         displayFeatured()

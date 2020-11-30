@@ -31434,3 +31434,1729 @@ Processing by QuestionnairesController#index as */*
 Completed 200 OK in 134ms (Views: 85.0ms | ActiveRecord: 43.3ms | Allocations: 27542)
 
 
+Started GET "/questionnaires" for ::1 at 2020-11-23 16:51:13 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (14.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 56ms (Views: 34.8ms | ActiveRecord: 20.2ms | Allocations: 14765)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-23 16:51:49 -0500
+  [1m[35m (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (2.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 300ms (Views: 250.3ms | ActiveRecord: 35.4ms | Allocations: 30788)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 18:43:18 -0500
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (6.5ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (7.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 218ms (Views: 148.3ms | ActiveRecord: 48.6ms | Allocations: 30788)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 18:43:23 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 93ms (Views: 86.9ms | ActiveRecord: 5.9ms | Allocations: 14686)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 18:43:28 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 53ms (Views: 46.8ms | ActiveRecord: 5.7ms | Allocations: 14684)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 18:43:32 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 56ms (Views: 49.3ms | ActiveRecord: 6.3ms | Allocations: 14683)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 18:49:20 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (2.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (2.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 81ms (Views: 69.3ms | ActiveRecord: 11.4ms | Allocations: 14779)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 18:57:12 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (16.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (2.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 97ms (Views: 72.8ms | ActiveRecord: 24.1ms | Allocations: 14766)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 18:57:17 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 97ms (Views: 90.1ms | ActiveRecord: 6.0ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:04:43 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (14.1ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (3.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 63ms (Views: 40.0ms | ActiveRecord: 22.2ms | Allocations: 14765)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:10:03 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.1ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 69ms (Views: 62.1ms | ActiveRecord: 6.2ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:10:37 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 55ms (Views: 49.0ms | ActiveRecord: 5.4ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:11:32 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 70ms (Views: 63.0ms | ActiveRecord: 6.0ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:11:49 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 54ms (Views: 48.3ms | ActiveRecord: 5.6ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:12:03 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 51ms (Views: 44.6ms | ActiveRecord: 5.5ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:13:33 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 57ms (Views: 49.8ms | ActiveRecord: 6.0ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:14:18 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 55ms (Views: 48.0ms | ActiveRecord: 5.9ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:15:16 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 61ms (Views: 54.7ms | ActiveRecord: 5.7ms | Allocations: 14668)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:15:34 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 52ms (Views: 45.5ms | ActiveRecord: 5.4ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:15:50 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 52ms (Views: 45.6ms | ActiveRecord: 5.8ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:16:21 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 41.5ms | ActiveRecord: 4.8ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:18:13 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 59ms (Views: 52.8ms | ActiveRecord: 5.6ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:18:22 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 48ms (Views: 42.3ms | ActiveRecord: 5.2ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:19:05 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 50ms (Views: 43.7ms | ActiveRecord: 5.6ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:19:19 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 45ms (Views: 39.5ms | ActiveRecord: 5.0ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:19:44 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 46ms (Views: 40.1ms | ActiveRecord: 5.3ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:20:46 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 53ms (Views: 47.0ms | ActiveRecord: 5.4ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:22:32 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.2ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 84ms (Views: 75.8ms | ActiveRecord: 8.1ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:22:55 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.1ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 85ms (Views: 76.2ms | ActiveRecord: 8.2ms | Allocations: 14665)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:24:18 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 51ms (Views: 44.9ms | ActiveRecord: 5.7ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:24:30 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 72ms (Views: 65.2ms | ActiveRecord: 5.7ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:24:51 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 53ms (Views: 46.2ms | ActiveRecord: 5.8ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:26:45 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 50ms (Views: 44.4ms | ActiveRecord: 5.3ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:26:55 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 50ms (Views: 43.3ms | ActiveRecord: 5.8ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:27:38 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 73ms (Views: 65.7ms | ActiveRecord: 6.5ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:27:57 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 74ms (Views: 66.9ms | ActiveRecord: 6.6ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:28:23 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 69ms (Views: 62.4ms | ActiveRecord: 6.4ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:28:34 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 50ms (Views: 43.8ms | ActiveRecord: 5.3ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:28:54 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 56ms (Views: 50.5ms | ActiveRecord: 5.4ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:30:20 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 72ms (Views: 64.8ms | ActiveRecord: 6.6ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:30:35 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 74ms (Views: 67.3ms | ActiveRecord: 6.0ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:30:54 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 61ms (Views: 53.9ms | ActiveRecord: 6.2ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:31:30 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 61ms (Views: 54.8ms | ActiveRecord: 5.9ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:31:56 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 66ms (Views: 59.9ms | ActiveRecord: 5.5ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:32:15 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.1ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 40.2ms | ActiveRecord: 5.8ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:33:01 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 60ms (Views: 53.5ms | ActiveRecord: 6.1ms | Allocations: 14665)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:33:55 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 63ms (Views: 55.5ms | ActiveRecord: 6.5ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 19:34:08 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 59ms (Views: 52.6ms | ActiveRecord: 5.9ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:50:56 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (15.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 69ms (Views: 46.5ms | ActiveRecord: 21.9ms | Allocations: 18768)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:51:09 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 41.2ms | ActiveRecord: 5.3ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:51:32 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 47ms (Views: 42.1ms | ActiveRecord: 4.5ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:53:00 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 49ms (Views: 43.8ms | ActiveRecord: 5.2ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:53:57 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.6ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 43ms (Views: 37.7ms | ActiveRecord: 4.7ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:54:29 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 60ms (Views: 54.1ms | ActiveRecord: 5.2ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:54:32 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.2ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 51ms (Views: 45.0ms | ActiveRecord: 5.7ms | Allocations: 14665)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:55:31 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 45ms (Views: 39.7ms | ActiveRecord: 5.3ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:55:46 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 41ms (Views: 35.0ms | ActiveRecord: 4.9ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:56:01 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 48ms (Views: 42.8ms | ActiveRecord: 4.8ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:56:14 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 45ms (Views: 39.7ms | ActiveRecord: 4.9ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:57:04 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 42ms (Views: 36.3ms | ActiveRecord: 4.9ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:57:25 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 44ms (Views: 38.1ms | ActiveRecord: 5.2ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:57:32 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.8ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 56ms (Views: 49.8ms | ActiveRecord: 5.5ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:58:18 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.3ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 57ms (Views: 50.6ms | ActiveRecord: 6.0ms | Allocations: 14667)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-24 21:58:29 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.7ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 41ms (Views: 35.7ms | ActiveRecord: 4.9ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-30 10:43:46 -0500
+  [1m[35m (4.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (6.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (7.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (2.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 431ms (Views: 367.0ms | ActiveRecord: 45.7ms | Allocations: 30793)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-30 10:43:49 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 266ms (Views: 260.0ms | ActiveRecord: 5.5ms | Allocations: 14686)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:01:12 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 34.9ms | Allocations: 317)
+Completed 200 OK in 82ms (Views: 49.4ms | ActiveRecord: 0.0ms | Allocations: 1594)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:01:21 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 21.2ms | Allocations: 210)
+Completed 200 OK in 28ms (Views: 25.3ms | ActiveRecord: 0.0ms | Allocations: 1146)
+
+
+Started GET "/favicon.ico" for ::1 at 2020-11-30 12:01:21 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+rack-cors (1.1.1) lib/rack/cors.rb:100:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.6) lib/puma/configuration.rb:228:in `call'
+puma (4.3.6) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.6) lib/puma/server.rb:472:in `process_client'
+puma (4.3.6) lib/puma/server.rb:328:in `block in run'
+puma (4.3.6) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/" for ::1 at 2020-11-30 12:05:01 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 8)
+Completed 200 OK in 6ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 242)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:05:20 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 7)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:05:43 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.8ms | Allocations: 8)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 236)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:06:44 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 7)
+Completed 200 OK in 58ms (Views: 57.7ms | ActiveRecord: 0.0ms | Allocations: 237)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:07:29 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.3ms | Allocations: 7)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:07:37 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:07:43 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 8)
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 234)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:07:51 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 7)
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:07:53 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:07:54 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.1ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:07:54 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 3.7ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:07:54 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.6ms | Allocations: 7)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:07:54 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.2ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 3.8ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:07:54 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.4ms | Allocations: 7)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/" for ::1 at 2020-11-30 12:08:26 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/share/rvm/gems/ruby-2.6.1/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.5ms | Allocations: 7)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.0ms | Allocations: 233)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-30 14:30:59 -0500
+  [1m[35m (4.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (6.1ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (8.3ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.1ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 362ms (Views: 296.5ms | ActiveRecord: 47.5ms | Allocations: 30792)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-30 14:36:48 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.0ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 289ms (Views: 281.9ms | ActiveRecord: 5.7ms | Allocations: 14686)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-30 14:43:48 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (16.1ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 273ms (Views: 248.7ms | ActiveRecord: 23.3ms | Allocations: 14779)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-30 14:43:52 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.4ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 282ms (Views: 276.5ms | ActiveRecord: 5.1ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-30 14:45:01 -0500
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 373ms (Views: 334.4ms | ActiveRecord: 25.6ms | Allocations: 30792)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-30 14:45:59 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (1.4ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 188ms (Views: 180.8ms | ActiveRecord: 5.6ms | Allocations: 14686)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-30 14:46:00 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.5ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 246ms (Views: 239.5ms | ActiveRecord: 5.4ms | Allocations: 14685)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-30 14:50:09 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.6ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 166ms (Views: 159.7ms | ActiveRecord: 5.4ms | Allocations: 14664)
+
+
+Started GET "/questionnaires" for ::1 at 2020-11-30 14:54:52 -0500
+Processing by QuestionnairesController#index as */*
+  [1m[36mQuestionnaire Load (0.9ms)[0m  [1m[34mSELECT "questionnaires".* FROM "questionnaires" ORDER BY "questionnaires"."updated_at" DESC[0m
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 232]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.9ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 231]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (1.0ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 226]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.8ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 230]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 229]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 228]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+  [1m[36mQuestion Load (0.7ms)[0m  [1m[34mSELECT "questions".* FROM "questions" WHERE "questions"."questionnaire_id" = $1[0m  [["questionnaire_id", 227]]
+  ↳ app/controllers/questionnaires_controller.rb:4:in `index'
+Completed 200 OK in 350ms (Views: 342.8ms | ActiveRecord: 6.4ms | Allocations: 14664)
+
+
